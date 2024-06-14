@@ -1,0 +1,11 @@
+*.cubemap filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_1.psd filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_10.psd filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_2.psd filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_3.psd filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_4.psd filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_5.psd filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_6.psd filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_7.psd filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_8.psd filter=lfs diff=lfs merge=lfs -text
+/Assets/Skybox[[:space:]]add-on/Images/Skybox_9.psd filter=lfs diff=lfs merge=lfs -text
