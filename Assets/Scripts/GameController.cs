@@ -1,55 +1,74 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class GameController : MonoBehaviour
 {
-    public int globalScore = 0;
-    public int[] scoreByCat = { 0, 0, 0, 0, 0 };
+    public float globalScore = 0;
+    public float[] scoreByCat = { 0, 0, 0, 0, 0 };
     /*
      scoreByCat Esta separado em
     pos 0: Banco
 
     pos 1: Governo
 
-    pos 2: Indústria Privada
+    pos 2: Indï¿½stria Privada
 
-    pos 3: Orgão do Meio ambiente
+    pos 3: Orgï¿½o do Meio ambiente
 
-    pos 4: População
+    pos 4: Populaï¿½ï¿½o
      */
     public QuestionsController qc;
     public bool acabouQuestions = false;
-    public List<GameObject> cityFases = new List<GameObject>();
+
     [SerializeField] public TextMeshProUGUI scoreValue;
     public GameObject planet;
     public RotateAround planetRA;
     public Animator planetAnim;
     public Animator lightAnim;
     public bool respUltimaQuest = false;
+    //Fases of each group
+    public List<GameObject> bancoFases = new List<GameObject>();
+    public List<GroupAsset> bancoTeste;
+ 
     // Start is called before the first frame update
     void Start()
     {
         planetRA = planet.GetComponent<RotateAround>();
-        AttCity();
-       // scoreValue
+        //AttCity();
+        // scoreValue
     }
-
+    //Declare a custom struct.  The [Serializable] attribute ensures
+    //that its content is included when the 'stats' field is serialized.
+    [Serializable]
+    public struct GroupAsset
+    {
+        public int fase;
+        public GameObject go;
+    }
     // Update is called once per frame
     void Update()
     {
-        
+
 
 
     }
 
-    public void clickButton1() 
+    public void setBaseScore() 
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            scoreByCat[i] = (qc.maxGScore[i] + qc.minGScore[i])/2;
+        }
+    }
+    public void clickButton1()
     {
 
         if (!acabouQuestions && !respUltimaQuest)
         {
-            int[] pointHolder = qc.getRespValueByIndex(1);
+            float[] pointHolder = qc.getRespValueByIndex(1);
             for (int i = 0; i < 5; i++)
             {
                 scoreByCat[i] += pointHolder[i];
@@ -60,16 +79,16 @@ public class GameController : MonoBehaviour
         else if (acabouQuestions && !respUltimaQuest)
         {
             respUltimaQuest = true;
-            int[] pointHolder = qc.getRespValueByIndex(1);
+            float[] pointHolder = qc.getRespValueByIndex(1);
             for (int i = 0; i < 5; i++)
             {
                 scoreByCat[i] += pointHolder[i];
             }
             PassDay();
         }
-        else 
-        { 
-        
+        else
+        {
+
         }
 
     }
@@ -78,12 +97,12 @@ public class GameController : MonoBehaviour
         if (!acabouQuestions)
         {
             //score += qc.getRespValueByIndex(2);
-            int[] pointHolder = qc.getRespValueByIndex(2);
+            float[] pointHolder = qc.getRespValueByIndex(2);
             for (int i = 0; i < 5; i++)
             {
                 scoreByCat[i] += pointHolder[i];
             }
-            
+
             PassDay();
             qc.nextQuestion();
         }
@@ -91,7 +110,7 @@ public class GameController : MonoBehaviour
         {
             respUltimaQuest = true;
             //score += qc.getRespValueByIndex(2);
-            int[] pointHolder = qc.getRespValueByIndex(2);
+            float[] pointHolder = qc.getRespValueByIndex(2);
             for (int i = 0; i < 5; i++)
             {
                 scoreByCat[i] += pointHolder[i];
@@ -110,7 +129,7 @@ public class GameController : MonoBehaviour
         if (!acabouQuestions)
         {
             //score += qc.getRespValueByIndex(3);
-            int[] pointHolder = qc.getRespValueByIndex(3);
+            float[] pointHolder = qc.getRespValueByIndex(3);
             for (int i = 0; i < 5; i++)
             {
                 scoreByCat[i] += pointHolder[i];
@@ -122,13 +141,13 @@ public class GameController : MonoBehaviour
         {
             respUltimaQuest = true;
             //score += qc.getRespValueByIndex(3);
-            int[] pointHolder = qc.getRespValueByIndex(3);
+            float[] pointHolder = qc.getRespValueByIndex(3);
             for (int i = 0; i < 5; i++)
             {
                 scoreByCat[i] += pointHolder[i];
             }
             PassDay();
-           
+
         }
         else
         {
@@ -141,7 +160,7 @@ public class GameController : MonoBehaviour
         if (!acabouQuestions)
         {
             //score += qc.getRespValueByIndex(4);
-            int[] pointHolder = qc.getRespValueByIndex(4);
+            float[] pointHolder = qc.getRespValueByIndex(4);
             for (int i = 0; i < 5; i++)
             {
                 scoreByCat[i] += pointHolder[i];
@@ -153,13 +172,13 @@ public class GameController : MonoBehaviour
         {
             respUltimaQuest = true;
             //score += qc.getRespValueByIndex(4);
-            int[] pointHolder = qc.getRespValueByIndex(4);
+            float[] pointHolder = qc.getRespValueByIndex(4);
             for (int i = 0; i < 5; i++)
             {
                 scoreByCat[i] += pointHolder[i];
             }
             PassDay();
-           
+
         }
         else
         {
@@ -179,78 +198,154 @@ public class GameController : MonoBehaviour
 
     public void AttCity()
     {
-        globalScore = (scoreByCat[0] + scoreByCat[1] + scoreByCat[2] + scoreByCat[3] + scoreByCat[4]) / 5;
-        scoreValue.text = globalScore.ToString();
-        if (globalScore < 0)
-        {
-            foreach (GameObject gm in cityFases)
-            {
-                gm.SetActive(false);
-            }
-            cityFases[0].SetActive(true);
+        AttCityByBanco();
 
-   
-        }
-        else if (0 <= globalScore && globalScore < 100)
-        {
-            foreach (GameObject gm in cityFases)
-            {
-                gm.SetActive(false);
-            }
-            cityFases[1].SetActive(true);
-        }
-        else //score maior 100
-        {
-            foreach (GameObject gm in cityFases)
-            {
-                gm.SetActive(false);
-            }
-            cityFases[2].SetActive(true);
-        }
+
     }
     /*
     scoreByCat Esta separado em
-    pos 0: Banco
+    pos 0: Banco qc.gStep[0]
 
-    pos 1: Governo
+    pos 1: Governo qc.gStep[1]
 
-    pos 2: Indústria Privada
+    pos 2: Indï¿½stria Privada qc.gStep[2]
 
-    pos 3: Orgão do Meio ambiente
+    pos 3: Orgï¿½o do Meio ambiente qc.gStep[3]
 
-    pos 4: População
+    pos 4: Populaï¿½ï¿½o qc.gStep[0]
     */
-    public void AttCityByIndScore()
+    public void AttCityByBanco()
     {
+
         globalScore = (scoreByCat[0] + scoreByCat[1] + scoreByCat[2] + scoreByCat[3] + scoreByCat[4]) / 5;
         scoreValue.text = globalScore.ToString();
-
-        
-        if (globalScore < 0)
+        //TODO REVISAR ISSO DPS
+        /*
+         Banco qc.gStep[0]
+         AtualizaÃ§Ãµes do banco envolvem
+         PrÃ©dio do banco fica maior
+         Surgem edificaÃ§Ãµes maiores
+         
+         
+         Aqui fiz para 5 passos o que resulta em 6 ranges de valores
+         
+         */
+        if (scoreByCat[0] < qc.minGScore[0]+( 1 * qc.gStep[0]))// Distopia
         {
-            foreach (GameObject gm in cityFases)
+            Debug.Log("Distopico" +" Score banco: " + scoreByCat[0]+" step: "+ qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
             {
-                gm.SetActive(false);
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
             }
-            cityFases[0].SetActive(true);
-
-
         }
-        else if (0 <= globalScore && globalScore < 100)
+        else if (qc.minGScore[0] + (1 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (2 * qc.gStep[0]))// Muito negativo
         {
-            foreach (GameObject gm in cityFases)
+            Debug.Log("Estado muito  neg" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
             {
-                gm.SetActive(false);
+
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    case -2:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+                /*
+                if (ga.fase == 1)
+                {
+                    ga.go.SetActive(false);
+                }
+                if (ga.fase == 2)
+                {
+                    ga.go.SetActive(true);
+                }
+                */
             }
-            cityFases[1].SetActive(true);
         }
-        else //score maior 100
+        else if (qc.minGScore[0] + (2 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (3 * qc.gStep[0]))//Um pouco negativo
         {
-            foreach (GameObject gm in cityFases)
+            Debug.Log("Estado um pouco neg" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
             {
-                gm.SetActive(false);
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    case -2:
+                        ga.go.SetActive(true);
+                        break;
+                    case -1:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
             }
-            cityFases[2].SetActive(true);
+        }
+        else if (qc.minGScore[0] + (3 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (4 * qc.gStep[0]))// Um pouco Positivo
+        {
+            Debug.Log("Estado um pouco pos" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case 3:
+                        ga.go.SetActive(false);
+                        break;
+                    case 2:
+                        ga.go.SetActive(false);
+                        break;
+                    default:
+                        ga.go.SetActive(true);
+                        break;
+                }
+            }
+        }
+        else if (qc.minGScore[0] + (4 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (5 * qc.gStep[0]))// Muito Positivo
+        {
+            Debug.Log("Estado Muito positivo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case 3:
+                        ga.go.SetActive(false);
+                        break;
+                    default:
+                        ga.go.SetActive(true);
+                        break;
+                }
+            }
+        }
+
+        else // Utopia
+        {
+            Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    default:
+                        ga.go.SetActive(true);
+                        break;
+                }
+            }
         }
     }
 }
