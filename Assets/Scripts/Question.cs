@@ -24,14 +24,14 @@ public class Question
     //public int answ4Value = 0;
     //public int[] answ4scores = { 0, 0, 0, 0, 0 };
     // public int[,] answScores = { { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
-    public int[][] answScores = new int[4][]{
-    new int[] {0, 0, 0, 0,0},// answ1
-    new int[] {0, 0, 0, 0,0},// answ2
-    new int[] {0, 0, 0, 0,0},// answ3
-    new int[] {0, 0, 0, 0,0}// answ4
+    public float[][] answScores = new float[4][]{
+    new float[] {0.0f, 0.0f, 0.0f, 0.0f, 0.0f},// answ1
+    new float[] {0.0f, 0.0f, 0.0f, 0.0f, 0.0f},// answ2
+    new float[] {0.0f, 0.0f, 0.0f, 0.0f, 0.0f},// answ3
+    new float[] { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f }// answ4
     };
-    public int[] minimumScore = { 0, 0, 0, 0, 0 };
-    public int[] maximumScore = { 0, 0, 0, 0, 0 };
+    public float[] minimumScore = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
+    public float[] maximumScore = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
 
    
     public Question() 
@@ -46,11 +46,11 @@ public class Question
     //essa forma não é tão robusta, mas funciona
     public void AttMaxMinScore() 
     {
-        int maxMoment = 0;
-        int minMoment = 0;
+        float maxMoment = 0;
+        float minMoment = 0;
         for (int i = 0; i < 5; i++)
         {
-            foreach (int[] j in answScores)
+            foreach (float[] j in answScores)
             {
                 if (maxMoment < j[i])
                 {
@@ -62,7 +62,7 @@ public class Question
         }
         for (int i = 0; i < 5; i++)
         {
-            foreach (int[] j in answScores)
+            foreach (float[] j in answScores)
             {
                 if (minMoment > j[i])
                 {
