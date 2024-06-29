@@ -12,6 +12,8 @@ public class QuestionsController : MonoBehaviour
     [SerializeField] public TextMeshProUGUI q3Text;
     [SerializeField] public TextMeshProUGUI q4Text;
 
+
+    public GameController gm;
     //File Related
     private string filePath;
     private int currentLineIndex = 0;
@@ -25,22 +27,24 @@ public class QuestionsController : MonoBehaviour
     public Question currentQ;
     public bool enPopulate = false;
     //Score related
-    public int[] minGScore = { 0, 0, 0, 0, 0 };
-    public int[] maxGScore = { 0, 0, 0, 0, 0 };
+    public float[] minGScore = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
+    public float[] maxGScore = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
     //Step Related
     public float[] gStep = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
-    public int targetStep = 10;
+    public int targetStep = 6;
    
     void Start()
     {
         filePath = Application.dataPath + "/test.txt";  
         lines = File.ReadAllLines(filePath);
-
         // Question q1 = GetLineAtIndex(currentLineIndex, lines);
         //questions.Add(q1);
         populAllQuest();
         calcMaxMin();
         gStep = calcStep(targetStep);
+        //inicialização do game Controller depois de inicializar o Questions Controller
+        gm.setBaseScore();
+        gm.AttCity();
         Question q1 = getRandomQuest();
         perTxt.text = q1.question;
         q1Text.text = q1.answ1;
@@ -73,7 +77,7 @@ public class QuestionsController : MonoBehaviour
                 for (int i = 2; i < 7; i++)
                 {
                     //qInter.answ1scores[i-2] = int.Parse(sections[i]);
-                    qInter.answScores[0][ i-2] = int.Parse(sections[i]);
+                    qInter.answScores[0][ i-2] = float.Parse(sections[i]);
                     
                 }
                 //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questão
@@ -85,7 +89,7 @@ public class QuestionsController : MonoBehaviour
                 qInter.answ2 = sections[1];
                 for (int i = 2; i < 7; i++)
                 {
-                    qInter.answScores[1][ i - 2] = int.Parse(sections[i]);
+                    qInter.answScores[1][ i - 2] = float.Parse(sections[i]);
                 }
                 //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questão
                 currentLineIndex++;
@@ -96,7 +100,7 @@ public class QuestionsController : MonoBehaviour
                 qInter.answ3 = sections[1];
                 for (int i = 2; i < 7; i++)
                 {
-                    qInter.answScores[2][ i - 2] = int.Parse(sections[i]);
+                    qInter.answScores[2][ i - 2] = float.Parse(sections[i]);
                 }
                 //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questão
                 currentLineIndex++;
@@ -108,7 +112,7 @@ public class QuestionsController : MonoBehaviour
                 qInter.answ4 = sections[1]; // aqui tem que retirar o identificardor (ex p r1 r2 r3 etc), antes de printar
                 for (int i = 2; i < 7; i++)
                 {
-                    qInter.answScores[3][ i - 2] = int.Parse(sections[i]);
+                    qInter.answScores[3][ i - 2] = float.Parse(sections[i]);
                 }
                 //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questão
                 currentLineIndex++;
@@ -155,10 +159,12 @@ public class QuestionsController : MonoBehaviour
     }
     public void calcMaxMin()
     {
+       
         foreach (Question qi in questions)
         {
             for (int i = 0; i < 5; i++)
             {
+                //Debug.Log(maxGScore[0]);
                 maxGScore[i] += qi.maximumScore[i];
 
             }
@@ -172,7 +178,7 @@ public class QuestionsController : MonoBehaviour
 
     public float[] calcStep(int np)
     {
-        int[] range = { 0, 0, 0, 0, 0 };
+        float[] range = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
         float[] step = { 0.0f, 0.0f, 0.0f, 0.0f , 0.0f };
         for (int i = 0; i < 5; i++)
         {
@@ -194,7 +200,7 @@ public class QuestionsController : MonoBehaviour
         q3Text.text = qn.answ3;
         q4Text.text = qn.answ4;
     }
-    public int[] getRespValueByIndex( int question)
+    public float[] getRespValueByIndex( int question)
     {
         Question qi = currentQ;
         if (question == 1)
