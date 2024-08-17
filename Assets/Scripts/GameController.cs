@@ -248,7 +248,7 @@ public class GameController : MonoBehaviour
         }
         else if (qc.minGScore[0] + (1 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (2 * qc.gStep[0]))// Muito negativo
         {
-            Debug.Log("Estado muito  neg" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Negativo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
             foreach (GroupAsset ga in bancoTeste)
             {
 
@@ -278,7 +278,7 @@ public class GameController : MonoBehaviour
         }
         else if (qc.minGScore[0] + (2 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (3 * qc.gStep[0]))//Um pouco negativo
         {
-            Debug.Log("Estado um pouco neg" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
             foreach (GroupAsset ga in bancoTeste)
             {
                 switch (ga.fase)
@@ -300,7 +300,7 @@ public class GameController : MonoBehaviour
         }
         else if (qc.minGScore[0] + (3 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (4 * qc.gStep[0]))// Um pouco Positivo
         {
-            Debug.Log("Estado um pouco pos" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Positivo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
             foreach (GroupAsset ga in bancoTeste)
             {
                 switch (ga.fase)
@@ -317,23 +317,6 @@ public class GameController : MonoBehaviour
                 }
             }
         }
-        else if (qc.minGScore[0] + (4 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (5 * qc.gStep[0]))// Muito Positivo
-        {
-            Debug.Log("Estado Muito positivo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
-            foreach (GroupAsset ga in bancoTeste)
-            {
-                switch (ga.fase)
-                {
-                    case 3:
-                        ga.go.SetActive(false);
-                        break;
-                    default:
-                        ga.go.SetActive(true);
-                        break;
-                }
-            }
-        }
-
         else // Utopia
         {
             Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
