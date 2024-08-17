@@ -568,7 +568,7 @@ MonoBehaviour:
   DrawShore: 1
   MinShoreWidth: 0.1
   MaxShoreWidth: 0.15
-  MaxAmountOfContinents: 6
+  MaxAmountOfContinents: 11
   ContinentsMinSize: 0.1
   ContinentsMaxSize: 0.5
   MinLandExtrusionHeight: 0.01
