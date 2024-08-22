@@ -42,6 +42,7 @@ public class GrabRotation : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        //Talvez implementar zoom da camera nesse script depos 
 
         if (isRotating)
         {
