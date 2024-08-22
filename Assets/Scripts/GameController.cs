@@ -199,8 +199,10 @@ public class GameController : MonoBehaviour
     public void AttCity()
     {
         AttCityByBanco();
-
-
+        AttCityByGoverno();
+        AttCityByIndustria();
+        AttCityByAmbiente();
+        AttCityByPop();
     }
     /*
     scoreByCat Esta separado em
@@ -331,7 +333,358 @@ public class GameController : MonoBehaviour
             }
         }
     }
-    public void AttCityByBanco()
+    public void AttCityByGoverno()
+    {
+
+        globalScore = (scoreByCat[0] + scoreByCat[1] + scoreByCat[2] + scoreByCat[3] + scoreByCat[4]) / 5;
+        scoreValue.text = globalScore.ToString();
+        //TODO REVISAR ISSO DPS
+        /*
+         Banco qc.gStep[0]
+         Atualizações do banco envolvem
+         Prédio do banco fica maior
+         Surgem edificações maiores
+         
+         
+         Aqui fiz para 5 passos o que resulta em 6 ranges de valores
+         
+         */
+        if (scoreByCat[0] < qc.minGScore[0] + (1 * qc.gStep[0]))// Distopia
+        {
+            Debug.Log("Distopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+            }
+        }
+        else if (qc.minGScore[0] + (1 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (2 * qc.gStep[0]))// Muito negativo
+        {
+            Debug.Log("Estado Negativo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    case -2:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+                /*
+                if (ga.fase == 1)
+                {
+                    ga.go.SetActive(false);
+                }
+                if (ga.fase == 2)
+                {
+                    ga.go.SetActive(true);
+                }
+                */
+            }
+        }
+        else if (qc.minGScore[0] + (2 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (3 * qc.gStep[0]))//Um pouco negativo
+        {
+            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    case -2:
+                        ga.go.SetActive(true);
+                        break;
+                    case -1:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+            }
+        }
+        else if (qc.minGScore[0] + (3 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (4 * qc.gStep[0]))// Um pouco Positivo
+        {
+            Debug.Log("Estado Positivo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case 3:
+                        ga.go.SetActive(false);
+                        break;
+                    case 2:
+                        ga.go.SetActive(false);
+                        break;
+                    default:
+                        ga.go.SetActive(true);
+                        break;
+                }
+            }
+        }
+        else // Utopia
+        {
+            Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    default:
+                        ga.go.SetActive(true);
+                        break;
+                }
+            }
+        }
+    }
+    public void AttCityByIndustria()
+    {
+
+        globalScore = (scoreByCat[0] + scoreByCat[1] + scoreByCat[2] + scoreByCat[3] + scoreByCat[4]) / 5;
+        scoreValue.text = globalScore.ToString();
+        //TODO REVISAR ISSO DPS
+        /*
+         Banco qc.gStep[0]
+         Atualizações do banco envolvem
+         Prédio do banco fica maior
+         Surgem edificações maiores
+         
+         
+         Aqui fiz para 5 passos o que resulta em 6 ranges de valores
+         
+         */
+        if (scoreByCat[0] < qc.minGScore[0] + (1 * qc.gStep[0]))// Distopia
+        {
+            Debug.Log("Distopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+            }
+        }
+        else if (qc.minGScore[0] + (1 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (2 * qc.gStep[0]))// Muito negativo
+        {
+            Debug.Log("Estado Negativo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    case -2:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+                /*
+                if (ga.fase == 1)
+                {
+                    ga.go.SetActive(false);
+                }
+                if (ga.fase == 2)
+                {
+                    ga.go.SetActive(true);
+                }
+                */
+            }
+        }
+        else if (qc.minGScore[0] + (2 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (3 * qc.gStep[0]))//Um pouco negativo
+        {
+            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    case -2:
+                        ga.go.SetActive(true);
+                        break;
+                    case -1:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+            }
+        }
+        else if (qc.minGScore[0] + (3 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (4 * qc.gStep[0]))// Um pouco Positivo
+        {
+            Debug.Log("Estado Positivo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case 3:
+                        ga.go.SetActive(false);
+                        break;
+                    case 2:
+                        ga.go.SetActive(false);
+                        break;
+                    default:
+                        ga.go.SetActive(true);
+                        break;
+                }
+            }
+        }
+        else // Utopia
+        {
+            Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    default:
+                        ga.go.SetActive(true);
+                        break;
+                }
+            }
+        }
+    }
+    public void AttCityByAmbiente()
+    {
+
+        globalScore = (scoreByCat[0] + scoreByCat[1] + scoreByCat[2] + scoreByCat[3] + scoreByCat[4]) / 5;
+        scoreValue.text = globalScore.ToString();
+        //TODO REVISAR ISSO DPS
+        /*
+         Banco qc.gStep[0]
+         Atualizações do banco envolvem
+         Prédio do banco fica maior
+         Surgem edificações maiores
+         
+         
+         Aqui fiz para 5 passos o que resulta em 6 ranges de valores
+         
+         */
+        if (scoreByCat[0] < qc.minGScore[0] + (1 * qc.gStep[0]))// Distopia
+        {
+            Debug.Log("Distopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+            }
+        }
+        else if (qc.minGScore[0] + (1 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (2 * qc.gStep[0]))// Muito negativo
+        {
+            Debug.Log("Estado Negativo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    case -2:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+                /*
+                if (ga.fase == 1)
+                {
+                    ga.go.SetActive(false);
+                }
+                if (ga.fase == 2)
+                {
+                    ga.go.SetActive(true);
+                }
+                */
+            }
+        }
+        else if (qc.minGScore[0] + (2 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (3 * qc.gStep[0]))//Um pouco negativo
+        {
+            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case -3:
+                        ga.go.SetActive(true);
+                        break;
+                    case -2:
+                        ga.go.SetActive(true);
+                        break;
+                    case -1:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+            }
+        }
+        else if (qc.minGScore[0] + (3 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (4 * qc.gStep[0]))// Um pouco Positivo
+        {
+            Debug.Log("Estado Positivo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    case 3:
+                        ga.go.SetActive(false);
+                        break;
+                    case 2:
+                        ga.go.SetActive(false);
+                        break;
+                    default:
+                        ga.go.SetActive(true);
+                        break;
+                }
+            }
+        }
+        else // Utopia
+        {
+            Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            foreach (GroupAsset ga in bancoTeste)
+            {
+                switch (ga.fase)
+                {
+                    default:
+                        ga.go.SetActive(true);
+                        break;
+                }
+            }
+        }
+    }
+    public void AttCityByPop()
     {
 
         globalScore = (scoreByCat[0] + scoreByCat[1] + scoreByCat[2] + scoreByCat[3] + scoreByCat[4]) / 5;
