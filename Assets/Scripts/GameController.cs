@@ -247,61 +247,29 @@ public class GameController : MonoBehaviour
         {
             bancoAvatar.GetComponent<Transform>().localScale = new Vector3(0.015f, 0.015f, 0.015f);
             Debug.Log("Distopico" +" Score banco: " + scoreByCat[0]+" step: "+ qc.gStep[0]);
-            /*
+            
             foreach (GroupAsset ga in bancoObjs)
             {
                 switch (ga.fase)
                 {
-                    case -3:
-                        ga.go.SetActive(true);
-                        break;
+
                     default:
                         ga.go.SetActive(false);
                         break;
                 }
             }
-            */
+            
         }
         else if (qc.minGScore[0] + (1 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (2 * qc.gStep[0]))// Negativo
         {
             Debug.Log("Estado Negativo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
             bancoAvatar.GetComponent<Transform>().localScale = new Vector3(0.02f, 0.02f, 0.02f);
-            /*
+            
             foreach (GroupAsset ga in bancoObjs)
             {
 
                 switch (ga.fase)
                 {
-                    case -3:
-                        ga.go.SetActive(true);
-                        break;
-                    case -2:
-                        ga.go.SetActive(true);
-                        break;
-                    default:
-                        ga.go.SetActive(false);
-                        break;
-                }
-            }
-            */
-
-        }
-        else if (qc.minGScore[0] + (2 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (3 * qc.gStep[0]))//Neutro
-        {
-            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
-            bancoAvatar.GetComponent<Transform>().localScale = new Vector3(0.025f, 0.025f, 0.025f);
-
-            /*
-            foreach (GroupAsset ga in bancoObjs)
-            {
-                switch (ga.fase)
-                {
-                    case -3:
-                        ga.go.SetActive(true);
-                        break;
-                    case -2:
-                        ga.go.SetActive(true);
-                        break;
                     case -1:
                         ga.go.SetActive(true);
                         break;
@@ -310,29 +278,56 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
-            */
+            
+
+        }
+        else if (qc.minGScore[0] + (2 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (3 * qc.gStep[0]))//Neutro
+        {
+            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            bancoAvatar.GetComponent<Transform>().localScale = new Vector3(0.025f, 0.025f, 0.025f);
+
+            
+            foreach (GroupAsset ga in bancoObjs)
+            {
+                switch (ga.fase)
+                {
+                    case -1:
+                        ga.go.SetActive(true);
+                        break;
+                    case 0:
+                        ga.go.SetActive(true);
+                        break;
+                    default:
+                        ga.go.SetActive(false);
+                        break;
+                }
+            }
+            
         }
         else if (qc.minGScore[0] + (3 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (4 * qc.gStep[0]))//  Positivo
         {
             Debug.Log("Estado Positivo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
             bancoAvatar.GetComponent<Transform>().localScale = new Vector3(0.03f, 0.03f, 0.03f);
-            /*
+         
             foreach (GroupAsset ga in bancoObjs)
             {
                 switch (ga.fase)
                 {
-                    case 3:
-                        ga.go.SetActive(false);
+                    case -1:
+                        ga.go.SetActive(true);
                         break;
-                    case 2:
-                        ga.go.SetActive(false);
+                    case 0:
+                        ga.go.SetActive(true);
+                        break;
+                    case 1:
+                        ga.go.SetActive(true);
                         break;
                     default:
-                        ga.go.SetActive(true);
+                        ga.go.SetActive(false);
                         break;
                 }
             }
-            */
+         
 
         }
         else // Utopia
@@ -388,7 +383,7 @@ public class GameController : MonoBehaviour
             {
                 go.GetComponent<Transform>().localScale = new Vector3(0.02f, 0.02f, 0.02f);
             }
-            /*
+            
             foreach (GroupAsset ga in govObjs)
             {
 
@@ -404,19 +399,10 @@ public class GameController : MonoBehaviour
                         ga.go.SetActive(false);
                         break;
                 }
-                /*
-                if (ga.fase == 1)
-                {
-                    ga.go.SetActive(false);
-                }
-                if (ga.fase == 2)
-                {
-                    ga.go.SetActive(true);
-                }
-                */
-            /*
+  
+            
             }
-            */
+            
         }
         else if (qc.minGScore[1] + (2 * qc.gStep[1]) <= scoreByCat[1] && scoreByCat[1] < qc.minGScore[1] + (3 * qc.gStep[1]))//Um pouco negativo
         {
@@ -427,7 +413,7 @@ public class GameController : MonoBehaviour
                 go.GetComponent<Transform>().localScale = new Vector3(0.025f, 0.025f, 0.025f);
             }
 
-            /*
+            
             foreach (GroupAsset ga in govObjs)
             {
                 switch (ga.fase)
@@ -446,7 +432,7 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
-            */
+            
         }
         else if (qc.minGScore[1] + (3 * qc.gStep[1]) <= scoreByCat[1] && scoreByCat[1] < qc.minGScore[1] + (4 * qc.gStep[1]))// Um pouco Positivo
         {
@@ -457,7 +443,7 @@ public class GameController : MonoBehaviour
                 go.GetComponent<Transform>().localScale = new Vector3(0.03f, 0.03f, 0.03f);
             }
 
-            /*
+            
             foreach (GroupAsset ga in govObjs)
             {
                 switch (ga.fase)
@@ -473,7 +459,7 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
-            */
+            
         }
         else // Utopia
         {
@@ -484,7 +470,7 @@ public class GameController : MonoBehaviour
                 go.GetComponent<Transform>().localScale = new Vector3(0.035f, 0.035f, 0.035f);
             }
 
-            /*
+            
             foreach (GroupAsset ga in govObjs)
             {
                 switch (ga.fase)
@@ -494,7 +480,7 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
-            */
+            
         }
     }
     public void AttCityByIndustria()
