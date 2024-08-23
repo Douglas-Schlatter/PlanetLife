@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
     public Animator planetAnim;
     public Animator lightAnim;
     public bool respUltimaQuest = false;
-    //Fases of each group
+    //Fases and avatars of each group
     //public List<GameObject> bancoFases = new List<GameObject>();
     public List<GroupAsset> bancoObjs;
     public GameObject bancoAvatar;
@@ -41,7 +41,8 @@ public class GameController : MonoBehaviour
     public GameObject ambAvatar;
     public List<GroupAsset> popObjs;
     public GameObject popAvatar;
-
+    //Materials
+    public Material planetMat;
 
     // Start is called before the first frame update
     void Start()
@@ -212,9 +213,9 @@ public class GameController : MonoBehaviour
         scoreValue.text = globalScore.ToString();
         AttCityByBanco();
         AttCityByGoverno();
-        //AttCityByIndustria();
-        //AttCityByAmbiente();
-        //AttCityByPop();
+        AttCityByIndustria();
+        AttCityByAmbiente();
+        AttCityByPop();
     }
     /*
     scoreByCat Esta separado em
@@ -244,7 +245,7 @@ public class GameController : MonoBehaviour
          */
         if (scoreByCat[0] < qc.minGScore[0]+( 1 * qc.gStep[0]))// Distopia
         {
-            bancoAvatar.GetComponent<Transform>().localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            bancoAvatar.GetComponent<Transform>().localScale = new Vector3(0.015f, 0.015f, 0.015f);
             Debug.Log("Distopico" +" Score banco: " + scoreByCat[0]+" step: "+ qc.gStep[0]);
             /*
             foreach (GroupAsset ga in bancoObjs)
@@ -337,7 +338,7 @@ public class GameController : MonoBehaviour
         else // Utopia
         {
             Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);// Utopico
-            bancoAvatar.GetComponent<Transform>().localScale = new Vector3(0.04f, 0.04f, 0.04f);
+            bancoAvatar.GetComponent<Transform>().localScale = new Vector3(0.035f, 0.035f, 0.035f);
             foreach (GroupAsset ga in bancoObjs)
             {
                 switch (ga.fase)
@@ -353,7 +354,21 @@ public class GameController : MonoBehaviour
     public void AttCityByGoverno()
     {
 
- 
+        /*
+         Utopia:
+        -As iniciais aumentam de tamanho
+        -Aumenta a quantidade
+        Neutro:
+        -Pelo menos uma escola, Pelo menos um Hospital
+        -Pelo menos Delegacia
+        Distopico:
+        -As iniciais diminuem de tamanho
+        TODO:
+        -> tentar ver se é disponível desenhar linhas como estradas
+         
+         */
+
+
         if (scoreByCat[1] < qc.minGScore[1] + (1 * qc.gStep[1]))// Distopia
         {
             Debug.Log("Distopico" + " Score Gov: " + scoreByCat[1] + " step: " + qc.gStep[1]);
@@ -361,7 +376,7 @@ public class GameController : MonoBehaviour
             
             foreach (GameObject go in govAvatars)
             {
-                go.GetComponent<Transform>().localScale = new Vector3(0.01f, 0.01f, 0.01f);
+                go.GetComponent<Transform>().localScale = new Vector3(0.015f, 0.015f, 0.015f);
             }
             
         }
@@ -466,7 +481,7 @@ public class GameController : MonoBehaviour
 
             foreach (GameObject go in govAvatars)
             {
-                go.GetComponent<Transform>().localScale = new Vector3(0.04f, 0.04f, 0.04f);
+                go.GetComponent<Transform>().localScale = new Vector3(0.035f, 0.035f, 0.035f);
             }
 
             /*
@@ -488,18 +503,23 @@ public class GameController : MonoBehaviour
 
         //TODO REVISAR ISSO DPS
         /*
-         Banco qc.gStep[0]
-         Atualizações do banco envolvem
-         Prédio do banco fica maior
-         Surgem edificações maiores
-         
-         
-         Aqui fiz para 5 passos o que resulta em 6 ranges de valores
+            Avatar:  Industria com chaminé
+            Utopia:
+            -Tamanho de um aranha-céu
+            -Aumenta a quantidade de comercios
+            Neutro:
+            -Tamanho de uma casa
+            -Alguns comércios
+            Distopico:
+            -Tamanho menor que uma casa
+            -Desaparecem alguns
          
          */
         if (scoreByCat[2] < qc.minGScore[2] + (1 * qc.gStep[2]))// Distopia
         {
-            Debug.Log("Distopico" + " Score banco: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            Debug.Log("Distopico" + " Score Indus: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            indusAvatar.GetComponent<Transform>().localScale = new Vector3(0.015f, 0.015f, 0.015f);
+
             foreach (GroupAsset ga in indusObjs)
             {
                 switch (ga.fase)
@@ -515,7 +535,8 @@ public class GameController : MonoBehaviour
         }
         else if (qc.minGScore[2] + (1 * qc.gStep[2]) <= scoreByCat[2] && scoreByCat[2] < qc.minGScore[2] + (2 * qc.gStep[2]))// Muito negativo
         {
-            Debug.Log("Estado Negativo" + " Score banco: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            Debug.Log("Estado Negativo" + " Score Indus: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            indusAvatar.GetComponent<Transform>().localScale = new Vector3(0.02f, 0.02f, 0.02f);
             foreach (GroupAsset ga in indusObjs)
             {
 
@@ -545,7 +566,8 @@ public class GameController : MonoBehaviour
         }
         else if (qc.minGScore[2] + (2 * qc.gStep[2]) <= scoreByCat[2] && scoreByCat[2] < qc.minGScore[2] + (3 * qc.gStep[2]))//Um pouco negativo
         {
-            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            Debug.Log("Estado Neutro" + " Score Indus: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            indusAvatar.GetComponent<Transform>().localScale = new Vector3(0.025f, 0.025f, 0.025f);
             foreach (GroupAsset ga in indusObjs)
             {
                 switch (ga.fase)
@@ -567,7 +589,8 @@ public class GameController : MonoBehaviour
         }
         else if (qc.minGScore[2] + (3 * qc.gStep[2]) <= scoreByCat[2] && scoreByCat[2] < qc.minGScore[2] + (4 * qc.gStep[2]))// Um pouco Positivo
         {
-            Debug.Log("Estado Positivo" + " Score banco: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            Debug.Log("Estado Positivo" + " Score Indus: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            indusAvatar.GetComponent<Transform>().localScale = new Vector3(0.03f, 0.03f, 0.03f);
             foreach (GroupAsset ga in indusObjs)
             {
                 switch (ga.fase)
@@ -586,7 +609,8 @@ public class GameController : MonoBehaviour
         }
         else // Utopia
         {
-            Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            Debug.Log("Estado Utopico" + " Score Indus: " + scoreByCat[2] + " step: " + qc.gStep[2]);
+            indusAvatar.GetComponent<Transform>().localScale = new Vector3(0.035f, 0.035f, 0.035f);
             foreach (GroupAsset ga in indusObjs)
             {
                 switch (ga.fase)
@@ -604,18 +628,30 @@ public class GameController : MonoBehaviour
 
         //TODO REVISAR ISSO DPS
         /*
-         Banco qc.gStep[0]
-         Atualizações do banco envolvem
-         Prédio do banco fica maior
-         Surgem edificações maiores
-         
-         
-         Aqui fiz para 5 passos o que resulta em 6 ranges de valores
+            Avatar: Cor do planeta
+            Utopia:
+            -Cor Esverdeada
+            -Aumenta a quantidade de arvores
+            Neutro:
+            -Sem alteração de cor
+            -Algumas arvores
+            Distopico:
+            -Cor acinzentada
+            -Desaparecem algumas arvores
          
          */
-        if (scoreByCat[0] < qc.minGScore[0] + (1 * qc.gStep[0]))// Distopia
+        Color customColor;
+        //teste.SetColor("_Mid_Color", customColor);
+        if (scoreByCat[3] < qc.minGScore[3] + (1 * qc.gStep[3]))// Distopia
         {
-            Debug.Log("Distopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Distopico" + " Score Amb: " + scoreByCat[3] + " step: " + qc.gStep[3]);
+
+            customColor = new Color(0.528f, 0.302f, 0.062f, 0.0f);
+            planetMat.SetColor("_Bottom_Color", customColor);
+
+            customColor = new Color(0.108f, 0.509f, 0.304f, 0.0f);
+            planetMat.SetColor("_Mid_Color", customColor);
+            /*
             foreach (GroupAsset ga in ambObjs)
             {
                 switch (ga.fase)
@@ -628,10 +664,18 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
+            */
         }
-        else if (qc.minGScore[0] + (1 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (2 * qc.gStep[0]))// Muito negativo
+        else if (qc.minGScore[3] + (1 * qc.gStep[3]) <= scoreByCat[3] && scoreByCat[3] < qc.minGScore[3] + (2 * qc.gStep[3]))// negativo
         {
-            Debug.Log("Estado Negativo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Negativo" + " Score Amb: " + scoreByCat[3] + " step: " + qc.gStep[3]);
+
+            customColor = new Color(0f, 0.152f, 1.0f, 0.0f);
+            planetMat.SetColor("_Bottom_Color", customColor);
+
+            customColor = new Color(0.108f, 0.509f, 0.304f, 0.0f);
+            planetMat.SetColor("_Mid_Color", customColor);
+            /*
             foreach (GroupAsset ga in ambObjs)
             {
 
@@ -647,21 +691,19 @@ public class GameController : MonoBehaviour
                         ga.go.SetActive(false);
                         break;
                 }
-                /*
-                if (ga.fase == 1)
-                {
-                    ga.go.SetActive(false);
-                }
-                if (ga.fase == 2)
-                {
-                    ga.go.SetActive(true);
-                }
-                */
             }
+            */
         }
-        else if (qc.minGScore[0] + (2 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (3 * qc.gStep[0]))//Um pouco negativo
+        else if (qc.minGScore[3] + (2 * qc.gStep[3]) <= scoreByCat[3] && scoreByCat[3] < qc.minGScore[3] + (3 * qc.gStep[3]))//neutro
         {
-            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Neutro" + " Score Amb: " + scoreByCat[3] + " step: " + qc.gStep[3]);
+
+            customColor = new Color(0f, 0.152f, 1.0f, 0.0f);
+            planetMat.SetColor("_Bottom_Color", customColor);
+
+            customColor = new Color(0.0f, 1.0f, 0.490f, 0.0f);
+            planetMat.SetColor("_Mid_Color", customColor);
+            /*
             foreach (GroupAsset ga in ambObjs)
             {
                 switch (ga.fase)
@@ -680,10 +722,12 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
+            */
         }
-        else if (qc.minGScore[0] + (3 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (4 * qc.gStep[0]))// Um pouco Positivo
+        else if (qc.minGScore[3] + (3 * qc.gStep[3]) <= scoreByCat[3] && scoreByCat[3] < qc.minGScore[3] + (4 * qc.gStep[3]))//  Positivo
         {
-            Debug.Log("Estado Positivo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Positivo" + " Score Amb: " + scoreByCat[3] + " step: " + qc.gStep[3]);
+            /*
             foreach (GroupAsset ga in ambObjs)
             {
                 switch (ga.fase)
@@ -699,10 +743,12 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
+            */
         }
         else // Utopia
         {
-            Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Utopico" + " Score Amb: " + scoreByCat[3] + " step: " + qc.gStep[3]);//utopia
+            /*
             foreach (GroupAsset ga in ambObjs)
             {
                 switch (ga.fase)
@@ -712,26 +758,29 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
+            */
         }
     }
     public void AttCityByPop()
     {
 
-
-        //TODO REVISAR ISSO DPS
         /*
-         Banco qc.gStep[0]
-         Atualizações do banco envolvem
-         Prédio do banco fica maior
-         Surgem edificações maiores
-         
-         
-         Aqui fiz para 5 passos o que resulta em 6 ranges de valores
+        Avatar: ?
+        Utopia:
+        -Muitas pessoas circulando
+        Neutro:
+        -Algumas pessoas circulando
+        Distopico:
+        -Desaparecem algumas pessoas
          
          */
-        if (scoreByCat[0] < qc.minGScore[0] + (1 * qc.gStep[0]))// Distopia
+
+
+        if (scoreByCat[4] < qc.minGScore[4] + (1 * qc.gStep[4]))// Distopia
         {
-            Debug.Log("Distopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Distopico" + " Score banco: " + scoreByCat[4] + " step: " + qc.gStep[4]);
+            popAvatar.GetComponent<Transform>().localScale = new Vector3(0.015f, 0.015f, 0.015f);
+            /*
             foreach (GroupAsset ga in popObjs)
             {
                 switch (ga.fase)
@@ -744,10 +793,13 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
+            */
         }
-        else if (qc.minGScore[0] + (1 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (2 * qc.gStep[0]))// Muito negativo
+        else if (qc.minGScore[4] + (1 * qc.gStep[4]) <= scoreByCat[4] && scoreByCat[4] < qc.minGScore[4] + (2 * qc.gStep[4]))// Muito negativo
         {
-            Debug.Log("Estado Negativo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Negativo" + " Score banco: " + scoreByCat[4] + " step: " + qc.gStep[4]);
+            popAvatar.GetComponent<Transform>().localScale = new Vector3(0.02f, 0.02f, 0.02f);
+            /*
             foreach (GroupAsset ga in popObjs)
             {
 
@@ -763,21 +815,14 @@ public class GameController : MonoBehaviour
                         ga.go.SetActive(false);
                         break;
                 }
-                /*
-                if (ga.fase == 1)
-                {
-                    ga.go.SetActive(false);
-                }
-                if (ga.fase == 2)
-                {
-                    ga.go.SetActive(true);
-                }
-                */
             }
+            */
         }
-        else if (qc.minGScore[0] + (2 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (3 * qc.gStep[0]))//Um pouco negativo
+        else if (qc.minGScore[4] + (2 * qc.gStep[4]) <= scoreByCat[4] && scoreByCat[4] < qc.minGScore[4] + (3 * qc.gStep[4]))//Um pouco negativo
         {
-            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Neutro" + " Score banco: " + scoreByCat[4] + " step: " + qc.gStep[4]);
+            popAvatar.GetComponent<Transform>().localScale = new Vector3(0.025f, 0.025f, 0.025f);
+            /*
             foreach (GroupAsset ga in popObjs)
             {
                 switch (ga.fase)
@@ -796,10 +841,13 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
+            */
         }
-        else if (qc.minGScore[0] + (3 * qc.gStep[0]) <= scoreByCat[0] && scoreByCat[0] < qc.minGScore[0] + (4 * qc.gStep[0]))// Um pouco Positivo
+        else if (qc.minGScore[4] + (3 * qc.gStep[4]) <= scoreByCat[4] && scoreByCat[4] < qc.minGScore[4] + (4 * qc.gStep[4]))// Um pouco Positivo
         {
-            Debug.Log("Estado Positivo" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Positivo" + " Score banco: " + scoreByCat[4] + " step: " + qc.gStep[4]);
+            popAvatar.GetComponent<Transform>().localScale = new Vector3(0.03f, 0.03f, 0.03f);
+            /*
             foreach (GroupAsset ga in popObjs)
             {
                 switch (ga.fase)
@@ -815,10 +863,13 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
+            */
         }
         else // Utopia
         {
-            Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[0] + " step: " + qc.gStep[0]);
+            Debug.Log("Estado Utopico" + " Score banco: " + scoreByCat[4] + " step: " + qc.gStep[4]);
+            popAvatar.GetComponent<Transform>().localScale = new Vector3(0.035f, 0.035f, 0.035f);
+            /*
             foreach (GroupAsset ga in popObjs)
             {
                 switch (ga.fase)
@@ -828,6 +879,7 @@ public class GameController : MonoBehaviour
                         break;
                 }
             }
+            */
         }
     }
 
