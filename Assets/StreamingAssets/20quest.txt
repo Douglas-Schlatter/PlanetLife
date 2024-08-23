@@ -1,0 +1,120 @@
+P1/ 1- Como representante do banco, você precisa escolher apenas um cliente para liberar um empréstimo. Qual você escolhe?
+R1/ A) Cliente 1- Precisa de um grande empréstimo para abrir uma fábrica de cosméticos. No plano de negócios não há medidas sustentáveis. /16/4/16/-16/2
+R2/ B) Cliente 2- Precisa de um empréstimo para abrir uma loja de produtos orgânicos e saudáveis. O plano de negócios inclui medidas sustentáveis, mas o valor do empréstimo é baixo. /8/2/8/4/4
+R3/ C) Cliente 3- Precisa de um grande empréstimo para expandir seu negócio de tecnologia. Possui um plano de negócios sólido e sustentável. /16/4/16/4/4
+R4/ D) Cliente 4- Precisa de um grande empréstimo para construir um hospital privado. Não há medidas sustentáveis na edificação. /16/4/16/-8/8
+FQ/
+P2/ 2- Você e alguns sócios decidiram iniciar um banco digital. Qual vai ser o principal objetivo: 
+R1/ A) Investir em projetos de energia renovável e eficiência energética. /16/8/16/16/4
+R2/ B) Oferecer linhas de crédito com juros subsidiados para empresas que adotam práticas sustentáveis. /8/2/4/8/2
+R3/ C) Investir em projetos que possuam uma boa proposta de negócios, mesmo que não sejam sustentáveis.  /16/2/16/-16/0
+R4/ D) Investir em projetos agrícolas, devido à alta rentabilidade para o banco. /16/2/8/-16/0
+FQ/
+P3/ 3- Você possui um banco e quer incentivar práticas sustentáveis entre seus clientes e contribuir para a preservação ambiental. Quais ações você vai adotar: 
+R1/ A) Oferecer linhas de crédito com taxas reduzidas para projetos de energia renovável, incentivando empresas e indivíduos a investirem em fontes de energia limpas, como solar e eólica. /16/4/4/16/2
+R2/ B) Investir em empresas que desmatam áreas protegidas, buscando maximizar lucros independentemente dos impactos ambientais. /2/-4/4/-16/2
+R3/ C) Criar programas de recompensas para clientes que utilizam serviços bancários digitais, reduzindo o uso de papel e promovendo a digitalização dos processos. /4/0/2/4/2
+R4/ D) Financiar apenas projetos de infraestrutura que utilizam práticas de construção sustentável, garantindo que os empreendimentos apoiados pelo banco respeitem normas ambientais rigorosas. /16/4/16/-16/2
+FQ/
+P4/ 4- Qual estratégia um banco pode adotar para alinhar seus investimentos com os objetivos de desenvolvimento sustentável?
+R1/ A) Criar um fundo de investimento focado em empresas de tecnologia limpa e agricultura sustentável. /16/8/16/16/8
+R2/ B) Continuar financiando indústrias altamente poluentes, sem considerar os impactos ambientais e sociais, visando apenas o retorno financeiro a curto prazo. /-2/-4/4/-16/-8
+R3/ C) Lançar programas de educação financeira que incluam a conscientização sobre investimentos responsáveis, ajudando os clientes a entenderem como suas escolhas financeiras podem influenciar o meio ambiente. /4/2/0/4/4
+R4/ D) Priorizar empréstimos para projetos que seguem práticas de economia circular, onde os resíduos são minimizados e os recursos são reutilizados, promovendo a sustentabilidade em toda a cadeia produtiva. /8/2/8/16/4
+FQ/
+P5/ 5- Você precisa  escolher um projeto de Lei para aprovar. Qual você escolhe? 
+R1/ A) PL 1 - Construção de uma ciclovia na via principal da cidade para estimular a população a utilizar menos os carros e promover a prática de exercícios./2/16/2/8/4
+R2/ B) PL 2 - Construção de uma estrada para interligar duas cidades. /8/16/16/-16/8
+R3/ C) PL 3 - Programa de habitação de interesse social, com medidas sustentáveis. /8/16/16/-4/16
+R4/ D) PL 4 - Revitalização da praça central da cidade, que estava abandonada, e incentivo do comércio na região. /2/16/8/4/8
+FQ/
+P6/ 6- A cidade que você governa no Planet LIfE é a que mais consome água. Qual dessas medidas você decide tomar para reduzir o consumo? 
+R1/ A) Campanhas de conscientização nas mídias sociais e TV sobre uso racional da água /0/4/0/4/2
+R2/ B) Implementação de sistemas de reuso de água em edifícios comerciais e públicos. /2/8/2/8/2
+R3/ C) Aumento na tarifa da água. /0/-8/0/4/-4
+R4/ D) Implementar cortes programados no fornecimento de água em bairros residenciais em determinados horários. /0/-16/0/4/-8
+FQ/
+P7/ 7- Você governa uma das maiores cidades do Planet LIfE e quer torná-la mais sustentável. Quais modificações são prioridades na sua gestão? 
+R1/ A) Incentivar a instalação de placas solares nas residências através da diminuição de taxas e impostos. /-2/4/4/8/4
+R2/ B) Incentivar a economia de água e energia elétrica, através do aumento do preço desses serviços. /2/-2/0/2/-8
+R3/ C) Aumentar o desempenho energético dos edifícios do governo. /0/4/2/4/2
+R4/ D) Criar programas para incentivar a reciclagem e a coleta correta dos resíduos domésticos. /0/8/4/8/2 
+FQ/
+P8/ 8- Qual seria uma ação governamental eficaz para promover a sustentabilidade e reduzir a emissão de gases de efeito estufa no setor de transporte?
+R1/ A) Subsidiar a compra de veículos elétricos e híbridos, incentivando a população a optar por meios de transporte com menor impacto ambiental. /4/4/8/4/2 
+R2/ B) Reduzir os investimentos em transporte público, forçando mais pessoas a utilizarem veículos particulares e, consequentemente, aumentando as emissões. /0/-16/-2/-16/-4 
+R3/ C) Eliminar as regulamentações sobre emissões veiculares, permitindo que os fabricantes produzam veículos menos eficientes em termos de consumo de combustível. /0/-8/-4/-8/-4
+R4/ D) Promover o desenvolvimento de infraestruturas para ciclovias e transportes públicos eficientes, como trens e ônibus elétricos, diminuindo a dependência de veículos particulares movidos a combustíveis fósseis. /2/4/2/8/8 
+FQ/
+P9/ 9- Você é o diretor de uma indústria de alimentos e está pensando em expandir sua fábrica. Para isso, você pode realizar a construção num local mais afastado da sede, ou pode construir próximo à sede, mas será necessário desmatar uma grande área que possui diversas espécies de animais e árvores nativas.
+R1/ A) Escolho a opção próxima à sede, pensando na praticidade. /4/2/16/-16/0
+R2/ B) Escolho construir longe, a favor de preservar a natureza /4/4/16/-8/2
+R3/ C) Escolho não expandir, mantendo o negócio como está, mesmo deixando de gerar lucros. /0/0/-16/2/0
+R4/ D) Escolho expandir próximo à sede, mas apenas a metade do tamanho que havia pensado inicialmente. /2/2/8/-8/2
+FQ/
+P10/ 10- Como diretor de uma indústria química, você precisa priorizar uma estratégia para guiar a empresa nesse ano. Qual você escolhe? 
+R1/ A) Implementar programas de gestão de resíduos para reduzir, reutilizar e reciclar materiais em todas as etapas do processo produtivo. /0/2/8/16/2
+R2/ B) Investir em tecnologias capazes de aumentar a produção, para gerar mais lucros e substituir a mão de obra. /2/-2/8/-8/-16
+R3/ C) Aumentar a extração de recursos naturais, que são baratos, visando aumentar a produção e os lucros. /0/-2/8/-16/-4
+R4/ D) Minimizar custos desligando alguns funcionários e cortando programas de treinamento. /0/-2/-8/0/-16 
+FQ/
+P11/ 11- Qual estratégia uma indústria pode adotar para reduzir seu impacto ambiental sem comprometer a produção?
+R1/ A) Investir em tecnologia de reciclagem de resíduos industriais, permitindo que materiais sejam reutilizados no processo produtivo, reduzindo a necessidade de extração de novos recursos. /0/2/4/8/4
+R2/ B) Aumentar o uso de combustíveis fósseis na produção de energia, visando baixar os custos operacionais, mesmo que isso aumente a emissão de gases poluentes. /0/-2/-4/-16/-8 
+R3/ C) Implementar programas de eficiência energética nas fábricas, otimizando o uso de energia através de equipamentos modernos e processos mais eficientes, o que reduz o consumo e a pegada de carbono. /4/4/8/8/4
+R4/ D) Deslocar a produção para áreas de preservação ambiental, aproveitando recursos naturais sem considerar os impactos ecológicos dessa ação. /0/-8/-8/-16/-8 
+FQ/
+P12/ 12- Você atua numa indústria que quer preservar os recursos hídricos, garantindo a sustentabilidade em suas operações, qual opção você escolhe: 
+R1/ A) Adotar processos de tratamento e reuso da água utilizada na produção, reduzindo o consumo total e evitando o despejo de efluentes poluídos nos corpos d'água. /0/2/4/8/4 
+R2/ B) Aumentar a captação de água diretamente dos rios e aquíferos, sem realizar o tratamento adequado, para garantir uma produção mais barata e rápida. /0/-4/-4/-8/-4
+R3/ C) Utilizar produtos químicos altamente tóxicos na limpeza dos maquinários, sem considerar o impacto que esses produtos podem ter quando descartados na água. /0/-4/-2/-8/-8
+R4/ D) Desenvolver parcerias com organizações ambientais, focando em iniciativas de proteção de nascentes e recuperação de áreas de bacia hidrográfica afetadas. /0/4/2/8/4 
+FQ/
+P13/ 13- Você faz parte do Ministério do Meio Ambiente e recebeu um ótimo valor para investir na edificação do Ministério. Como decide gastar esse dinheiro? 
+R1/ A) Transição para energia renovável, com colocação de placas solares no edifício. /4/16/16/16/2 
+R2/ B) Mudança na decoração e móveis do edifício, para modernizar o ambiente. /0/-2/4/-8/-2
+R3/ C) Projeto de paisagismo que inclua um espaço interno e externo com diversas áreas verdes e espécies nativas. /0/8/2/8/2 
+R4/ D) Melhoria na instalação hidrossanitária, incluindo torneiras com fechamento automático, chuveiros com restritores de vazão e captação de água da chuva para reuso em descargas e irrigação. /0/8/2/4/2 
+FQ/
+P14/ 14- Você faz parte do Ministério do Meio Ambiente e deve escolher uma estratégia para lidar com a poluição. Qual você escolhe: 
+R1/ A) Implementar políticas de incentivo ao uso de transporte público e de veículos elétricos. /2/8/16/4/2
+R2/ B) Promover o plantio de árvores e a criação de áreas verdes urbanas para absorver poluentes atmosféricos e melhorar a qualidade do ar. /0/8/0/16/4 
+R3/ C) Desenvolver programas de conscientização e educação ambiental para incentivar práticas mais sustentáveis e a redução do consumo de recursos não renováveis. /0/8/0/16/4 
+R4/ D) Aumento os impostos sobre veículos para que as pessoas utilizem o transporte público. /2/0/0/4/-8
+FQ/
+P15/ 15- Você faz parte do Ministério do Meio Ambiente e precisa decidir uma alternativa para reduzir a poluição das águas em uma cidade. Qual você escolhe: 
+R1/ A) Incentivar a construção de novas fábricas sem tratamento de resíduos. /0/-16/-4/-16/-8
+R2/ B) Criar programas de educação ambiental para a população. /0/2/0/2/2
+R3/ C) Permitindo o despejo de esgoto não tratado diretamente nos rios. /0/-2/-2/-8/-8
+R4/ D) Aumentar o uso de fertilizantes químicos nas áreas agrícolas. /0/-4/2/-8/-4
+FQ/
+P16/ 16-  Qual seria uma medida eficaz que o Ministério do Meio Ambiente poderia adotar para combater o desmatamento ilegal na Amazônia?
+R1/ A) Ampliar as áreas protegidas e reservas indígenas, garantindo que grandes porções de floresta permaneçam intocadas e sob vigilância constante. /0/4/0/8/4 
+R2/ B) Incentivar a agricultura de grande escala em áreas de floresta, permitindo que o setor agrícola se expanda em áreas preservadas. /0/-4/2/-16/-8 
+R3/ C) Reduzir o número de fiscais ambientais na região, diminuindo a fiscalização das atividades madeireiras e agrícolas ilegais. /0/-4/2/-8/-4
+R4/ D) Promover o reflorestamento e a recuperação de áreas degradadas, com incentivos para empresas e comunidades locais que participem de programas de reflorestamento. /2/4/2/16/8 
+FQ/
+P17/ 17- Você quer se mudar para uma cidade localizada no Planet LIfE e está procurando um imóvel para comprar. Qual das opções você escolhe?
+R1/ A) Apartamento em um bairro arborizado, com feira orgânica e praças próximas para fazer caminhadas. /4/2/2/4/4
+R2/ B) Casa no interior da cidade, com espaço para cultivar uma horta e ter alguns animais. /2/2/0/8/4 
+R3/ C) Apartamento mais afastado, em um bairro com pouca estrutura mas que se adequa mais ao orçamento. /2/0/0/-8/4 
+R4/ D) Casa afastada, mas não tem problema, pois posso me deslocar de carro. /4/0/0/-16/4 
+FQ/
+P18/ 18-  Como morador do Planet LIfE, quais medidas você adota para favorecer a sustentabilidade na sua cidade? 
+R1/ A) Desenvolvo um programa de reciclagem no condomínio onde moro, em parceria com os vizinhos e o síndico. /0/2/0/8/4 
+R2/ B) Reduzo o consumo de água e energia em minha residência. /0/2/0/2/0
+R3/ C) Nenhuma medida, pois o Planet LIfE já é sustentável. /0/-4/0/-16/-2 
+R4/ D) Participo de grupos voluntários que limpam as cidades e fazem reflorestamento e preservação de áreas verdes. /0/2/0/16/8
+FQ/
+P19/ 19-  Você mora no Planet LIfE, quais são seus hábitos?
+R1/ A) Não gosto de praticar exercícios físicos, mas tenho uma alimentação saudável e consumo principalmente de vendedores locais. /0/2/2/2/2
+R2/ B) Gosto de fazer exercícios no parque próximo a minha casa e tenho uma alimentação saudável baseada principalmente em alimentos orgânicos que compro na feira. /0/2/2/4/4
+R3/ C) Faço exercícios na academia do bairro e me alimento de forma consciente, consumindo principalmente alimentos orgânicos da feira. /0/2/4/4/4
+R4/ D) Não gosto de praticar exercícios físicos e prefiro me alimentar com comidas prontas que peço nos aplicativos de delivery pois não tenho tempo de cozinhar. /0/-2/4/-4/-4 
+FQ/
+P20/ 20-  Como morador do Planet LIfE, essas são suas práticas principais com relação a cozinha: 
+R1/ A)  Compro produtos locais e sazonais pois sei que isso reduz o transporte e a pegada de carbono. /0/2/0/4/2 
+R2/ B)  Possuo horta em casa e evito o consumo de proteínas de origem animal. /0/2/-4/4/2
+R3/ C)  Compro os alimentos em mercados próximos e feiras orgânicas da região. Evito desperdícios e além disso, possuo uma composteira para colocar os restos de comida. /0/2/0/4/2 
+R4/ D)  Faço uma alimentação prática, utilizo produtos industrializados e práticos. /0/-2/2/-4/-4 
+FA/
