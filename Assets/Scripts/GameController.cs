@@ -43,6 +43,16 @@ public class GameController : MonoBehaviour
     public GameObject popAvatar;
     //Materials
     public Material planetMat;
+    //Tela final
+    public GameObject canInicial;
+    public GameObject canFinal;
+    [SerializeField] public TextMeshProUGUI scoreT;
+    [SerializeField] public TextMeshProUGUI scoreB;
+    [SerializeField] public TextMeshProUGUI scoreG;
+    [SerializeField] public TextMeshProUGUI scoreI;
+    [SerializeField] public TextMeshProUGUI scoreM;
+    [SerializeField] public TextMeshProUGUI scoreS;
+
 
     // Start is called before the first frame update
     void Start()
@@ -63,9 +73,16 @@ public class GameController : MonoBehaviour
     void Update()
     {
         if (respUltimaQuest)
-        { 
-            
-        
+        {
+            canInicial.SetActive(false);
+            canFinal.SetActive(true);
+            scoreT.text = globalScore.ToString();
+            scoreB.text = scoreByCat[0].ToString();
+            scoreG.text = scoreByCat[1].ToString();
+            scoreI.text = scoreByCat[2].ToString();
+            scoreM.text = scoreByCat[3].ToString();
+            scoreS.text = scoreByCat[4].ToString();
+
         }
 
 
