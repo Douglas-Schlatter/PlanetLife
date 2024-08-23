@@ -36,7 +36,7 @@ public class QuestionsController : MonoBehaviour
     void Start()
     {
         //filePath = Application.dataPath + "/test.txt";  
-        filePath = Application.dataPath + "/20quest.txt";
+        filePath = Application.streamingAssetsPath + "/20quest.txt";
         lines = File.ReadAllLines(filePath);
         // Question q1 = GetLineAtIndex(currentLineIndex, lines);
         //questions.Add(q1);
