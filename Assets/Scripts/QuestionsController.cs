@@ -6,19 +6,23 @@ using TMPro;
 
 public class QuestionsController : MonoBehaviour
 {
+
+    //Ui Related
     [SerializeField] public TextMeshProUGUI perTxt;
     [SerializeField] public TextMeshProUGUI q1Text;
     [SerializeField] public TextMeshProUGUI q2Text;
     [SerializeField] public TextMeshProUGUI q3Text;
     [SerializeField] public TextMeshProUGUI q4Text;
 
-
+    //Game Controller
     public GameController gm;
+
     //File Related
     private string filePath;
     private int currentLineIndex = 0;
     public string[] lines;
     private string[] sections;
+
     //Questions Related
     public int questIndex = 0;
     public List<Question> questions = new List<Question>();
@@ -26,9 +30,12 @@ public class QuestionsController : MonoBehaviour
     public GameController gc;
     public Question currentQ;
     public bool enPopulate = false;
+
     //Score related
     public float[] minGScore = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
     public float[] maxGScore = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
+    public float[] absoluteScore = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
+
     //Step Related
     public float[] gStep = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
     public int targetStep = 6;
@@ -36,12 +43,13 @@ public class QuestionsController : MonoBehaviour
     void Start()
     {
         //filePath = Application.dataPath + "/test.txt";  
-        filePath = Application.streamingAssetsPath + "/20quest.txt";
+        filePath = Application.streamingAssetsPath + "/20quest.txt"; //versao de 20 quest
+        //filePath = Application.streamingAssetsPath + "/10quest.txt"; //versao de 10 quest
         lines = File.ReadAllLines(filePath);
         // Question q1 = GetLineAtIndex(currentLineIndex, lines);
         //questions.Add(q1);
         populAllQuest();
-        calcMaxMin();
+        calcMaxMinAbs();
         gStep = calcStep(targetStep);
         //inicialização do game Controller depois de inicializar o Questions Controller
         gm.setBaseScore();
@@ -158,14 +166,20 @@ public class QuestionsController : MonoBehaviour
         }
         return rq;
     }
-    public void calcMaxMin()
+
+
+    /// <summary>
+    /// Calcula o maximo e minimo por grupo do jogo, tambem calcula o valor absoluto dos scores para ser usado como
+    /// referencia na tela final para realizar o calculo de porcentagem do score
+    /// </summary>
+    public void calcMaxMinAbs()
     {
        
         foreach (Question qi in questions)
         {
             for (int i = 0; i < 5; i++)
             {
-                //Debug.Log(maxGScore[0]);
+
                 maxGScore[i] += qi.maximumScore[i];
 
             }
@@ -174,6 +188,10 @@ public class QuestionsController : MonoBehaviour
                 minGScore[i] += qi.minimumScore[i];
 
             }
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            absoluteScore[i] = Mathf.Abs(minGScore[i]) + Mathf.Abs(maxGScore[i]);
         }
     }
 
