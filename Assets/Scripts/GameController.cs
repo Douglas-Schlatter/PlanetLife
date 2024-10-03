@@ -46,20 +46,21 @@ public class GameController : MonoBehaviour
     //Tela final
     public GameObject canInicial;
     public GameObject canFinal;
-    [SerializeField] public TextMeshProUGUI scoreT;
-    [SerializeField] public TextMeshProUGUI scoreB;
-    [SerializeField] public TextMeshProUGUI scoreG;
-    [SerializeField] public TextMeshProUGUI scoreI;
-    [SerializeField] public TextMeshProUGUI scoreM;
-    [SerializeField] public TextMeshProUGUI scoreS;
+    [SerializeField]  TextMeshProUGUI[] scores;
 
+    /*
+    [SerializeField]  TextMeshProUGUI scoreB;
+    [SerializeField]  TextMeshProUGUI scoreG;
+    [SerializeField]  TextMeshProUGUI scoreI;
+    [SerializeField]  TextMeshProUGUI scoreM;
+    [SerializeField]  TextMeshProUGUI scoreS;
+    */
 
     // Start is called before the first frame update
     void Start()
     {
         planetRA = planet.GetComponent<RotateAround>();
-        //AttCity();
-        // scoreValue
+
     }
     //Declare a custom struct.  The [Serializable] attribute ensures
     //that its content is included when the 'stats' field is serialized.
@@ -76,13 +77,20 @@ public class GameController : MonoBehaviour
         {
             canInicial.SetActive(false);
             canFinal.SetActive(true);
-            scoreT.text = globalScore.ToString();
+            scores[0].text = globalScore.ToString();
+            for (int i = 1; i <= 5; i++)
+            {
+                scores[i].text = ((Math.Abs(scoreByCat[i - 1]) / qc.absoluteScore[i - 1])*100).ToString() + "%";
+
+            }
+
+            /*
             scoreB.text = scoreByCat[0].ToString();
             scoreG.text = scoreByCat[1].ToString();
             scoreI.text = scoreByCat[2].ToString();
             scoreM.text = scoreByCat[3].ToString();
             scoreS.text = scoreByCat[4].ToString();
-
+            */
         }
 
 
@@ -103,7 +111,18 @@ public class GameController : MonoBehaviour
             float[] pointHolder = qc.getRespValueByIndex(1);
             for (int i = 0; i < 5; i++)
             {
-                scoreByCat[i] += pointHolder[i];
+                if (qc.maxGScore[i] < (scoreByCat[i] + pointHolder[i]))
+                {
+                    scoreByCat[i] = qc.maxGScore[i];
+                }
+                else if ((scoreByCat[i] + pointHolder[i]) < qc.minGScore[i])
+                {
+                    scoreByCat[i] = qc.minGScore[i];
+                }
+                else
+                {
+                    scoreByCat[i] += pointHolder[i];
+                }
             }
             PassDay();
             qc.nextQuestion();
@@ -114,7 +133,18 @@ public class GameController : MonoBehaviour
             float[] pointHolder = qc.getRespValueByIndex(1);
             for (int i = 0; i < 5; i++)
             {
-                scoreByCat[i] += pointHolder[i];
+                if (qc.maxGScore[i] < (scoreByCat[i] + pointHolder[i]))
+                {
+                    scoreByCat[i] = qc.maxGScore[i];
+                }
+                else if ((scoreByCat[i] + pointHolder[i]) < qc.minGScore[i])
+                {
+                    scoreByCat[i] = qc.minGScore[i];
+                }
+                else
+                {
+                    scoreByCat[i] += pointHolder[i];
+                }
             }
             PassDay();
         }
@@ -132,7 +162,18 @@ public class GameController : MonoBehaviour
             float[] pointHolder = qc.getRespValueByIndex(2);
             for (int i = 0; i < 5; i++)
             {
-                scoreByCat[i] += pointHolder[i];
+                if (qc.maxGScore[i] < (scoreByCat[i] + pointHolder[i]))
+                {
+                    scoreByCat[i] = qc.maxGScore[i];
+                }
+                else if ((scoreByCat[i] + pointHolder[i]) < qc.minGScore[i])
+                {
+                    scoreByCat[i] = qc.minGScore[i];
+                }
+                else 
+                {
+                    scoreByCat[i] += pointHolder[i];
+                }
             }
 
             PassDay();
@@ -145,7 +186,18 @@ public class GameController : MonoBehaviour
             float[] pointHolder = qc.getRespValueByIndex(2);
             for (int i = 0; i < 5; i++)
             {
-                scoreByCat[i] += pointHolder[i];
+                if (qc.maxGScore[i] < (scoreByCat[i] + pointHolder[i]))
+                {
+                    scoreByCat[i] = qc.maxGScore[i];
+                }
+                else if ((scoreByCat[i] + pointHolder[i]) < qc.minGScore[i])
+                {
+                    scoreByCat[i] = qc.minGScore[i];
+                }
+                else
+                {
+                    scoreByCat[i] += pointHolder[i];
+                }
             }
 
             PassDay();
@@ -164,7 +216,18 @@ public class GameController : MonoBehaviour
             float[] pointHolder = qc.getRespValueByIndex(3);
             for (int i = 0; i < 5; i++)
             {
-                scoreByCat[i] += pointHolder[i];
+                if (qc.maxGScore[i] < (scoreByCat[i] + pointHolder[i]))
+                {
+                    scoreByCat[i] = qc.maxGScore[i];
+                }
+                else if ((scoreByCat[i] + pointHolder[i]) < qc.minGScore[i])
+                {
+                    scoreByCat[i] = qc.minGScore[i];
+                }
+                else
+                {
+                    scoreByCat[i] += pointHolder[i];
+                }
             }
             PassDay();
             qc.nextQuestion();
@@ -176,7 +239,18 @@ public class GameController : MonoBehaviour
             float[] pointHolder = qc.getRespValueByIndex(3);
             for (int i = 0; i < 5; i++)
             {
-                scoreByCat[i] += pointHolder[i];
+                if (qc.maxGScore[i] < (scoreByCat[i] + pointHolder[i]))
+                {
+                    scoreByCat[i] = qc.maxGScore[i];
+                }
+                else if ((scoreByCat[i] + pointHolder[i]) < qc.minGScore[i])
+                {
+                    scoreByCat[i] = qc.minGScore[i];
+                }
+                else
+                {
+                    scoreByCat[i] += pointHolder[i];
+                }
             }
             PassDay();
 
@@ -195,7 +269,18 @@ public class GameController : MonoBehaviour
             float[] pointHolder = qc.getRespValueByIndex(4);
             for (int i = 0; i < 5; i++)
             {
-                scoreByCat[i] += pointHolder[i];
+                if (qc.maxGScore[i] < (scoreByCat[i] + pointHolder[i]))
+                {
+                    scoreByCat[i] = qc.maxGScore[i];
+                }
+                else if ((scoreByCat[i] + pointHolder[i]) < qc.minGScore[i])
+                {
+                    scoreByCat[i] = qc.minGScore[i];
+                }
+                else
+                {
+                    scoreByCat[i] += pointHolder[i];
+                }
             }
             PassDay();
             qc.nextQuestion();
@@ -207,7 +292,18 @@ public class GameController : MonoBehaviour
             float[] pointHolder = qc.getRespValueByIndex(4);
             for (int i = 0; i < 5; i++)
             {
-                scoreByCat[i] += pointHolder[i];
+                if (qc.maxGScore[i] < (scoreByCat[i] + pointHolder[i]))
+                {
+                    scoreByCat[i] = qc.maxGScore[i];
+                }
+                else if ((scoreByCat[i] + pointHolder[i]) < qc.minGScore[i])
+                {
+                    scoreByCat[i] = qc.minGScore[i];
+                }
+                else
+                {
+                    scoreByCat[i] += pointHolder[i];
+                }
             }
             PassDay();
 

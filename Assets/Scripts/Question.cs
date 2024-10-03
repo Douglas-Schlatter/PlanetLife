@@ -5,25 +5,16 @@ using UnityEngine;
 public class Question
 {
     // Start is called before the first frame update
-    //Para implementar os multiplos scores dos diferentes tipos de jogador, seria bom trocar o inst score por um vetor, que tde acordo
+    //Para implementar os multiplos scores dos diferentes tipos de jogador, seria bom trocar o inst score por um vetor, que de acordo
     //com a aposição seráo score afetado pela pergunta
     //depois é so intanciar pelo gamecontroller
     public int id;
     public string question = "";
-    //nas respostas depois tenho que armazenar quantos recursos precisa e se escolhela da algum efeito positivo ou negativo
     public string answ1 = "";
-   // public int answ1Value = 0;
-    //public int[] answ1scores = { 0, 0, 0, 0, 0 };
     public string answ2 = "";
-    //public int answ2Value = 0;
-    //public int[] answ2scores = { 0, 0, 0, 0, 0 };
     public string answ3 = "";
-    //public int answ3Value = 0;
-    //public int[] answ3scores = { 0, 0, 0, 0, 0 };
     public string answ4 = "";
-    //public int answ4Value = 0;
-    //public int[] answ4scores = { 0, 0, 0, 0, 0 };
-    // public int[,] answScores = { { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
+
     public float[][] answScores = new float[4][]{
     new float[] {0.0f, 0.0f, 0.0f, 0.0f, 0.0f},// answ1
     new float[] {0.0f, 0.0f, 0.0f, 0.0f, 0.0f},// answ2
@@ -47,7 +38,7 @@ public class Question
     public void AttMaxMinScore() 
     {
         float maxMoment = 0;
-        float minMoment = 0;
+        float minMoment = Mathf.Infinity;
         for (int i = 0; i < 5; i++)
         {
             foreach (float[] j in answScores)
@@ -70,7 +61,7 @@ public class Question
                 }
             }
             minimumScore[i] = minMoment;
-            minMoment = 0;
+            minMoment = Mathf.Infinity;
         }
     }
 
