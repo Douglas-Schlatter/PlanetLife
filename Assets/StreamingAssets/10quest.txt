@@ -1,0 +1,60 @@
+P1/ 1- Como representante do banco, você precisa escolher apenas um cliente para liberar um empréstimo. Qual você escolhe?
+R1/ A) Cliente 1- Precisa de um grande empréstimo para abrir uma fábrica de cosméticos. No plano de negócios não há medidas sustentáveis. /16/4/16/-16/2
+R2/ B) Cliente 2- Precisa de um empréstimo para abrir uma loja de produtos orgânicos e saudáveis. O plano de negócios inclui medidas sustentáveis, mas o valor do empréstimo é baixo. /8/2/8/4/4
+R3/ C) Cliente 3- Precisa de um grande empréstimo para expandir seu negócio de tecnologia. Possui um plano de negócios sólido e sustentável. /16/4/16/4/4
+R4/ D) Cliente 4- Precisa de um grande empréstimo para construir um hospital privado. Não há medidas sustentáveis na edificação. /16/4/16/-8/8
+FQ/
+P2/ 2- Você e alguns sócios decidiram iniciar um banco digital. Qual vai ser o principal objetivo: 
+R1/ A) Investir em projetos de energia renovável e eficiência energética. /16/8/16/16/4
+R2/ B) Oferecer linhas de crédito com juros subsidiados para empresas que adotam práticas sustentáveis. /8/2/4/8/2
+R3/ C) Investir em projetos que possuam uma boa proposta de negócios, mesmo que não sejam sustentáveis.  /16/2/16/-16/0
+R4/ D) Investir em projetos agrícolas, devido à alta rentabilidade para o banco. /16/2/8/-16/0
+FQ/
+P5/ 3- Você precisa  escolher um projeto de Lei para aprovar. Qual você escolhe? 
+R1/ A) PL 1 - Construção de uma ciclovia na via principal da cidade para estimular a população a utilizar menos os carros e promover a prática de exercícios./2/16/2/8/4
+R2/ B) PL 2 - Construção de uma estrada para interligar duas cidades. /8/16/16/-16/8
+R3/ C) PL 3 - Programa de habitação de interesse social, com medidas sustentáveis. /8/16/16/-4/16
+R4/ D) PL 4 - Revitalização da praça central da cidade, que estava abandonada, e incentivo do comércio na região. /2/16/8/4/8
+FQ/
+P6/ 4- A cidade que você governa no Planet LIfE é a que mais consome água. Qual dessas medidas você decide tomar para reduzir o consumo? 
+R1/ A) Campanhas de conscientização nas mídias sociais e TV sobre uso racional da água /0/4/0/4/2
+R2/ B) Implementação de sistemas de reuso de água em edifícios comerciais e públicos. /2/8/2/8/2
+R3/ C) Aumento na tarifa da água. /0/-8/0/4/-4
+R4/ D) Implementar cortes programados no fornecimento de água em bairros residenciais em determinados horários. /0/-16/0/4/-8
+FQ/
+P9/ 5- Você é o diretor de uma indústria de alimentos e está pensando em expandir sua fábrica. Para isso, você pode realizar a construção num local mais afastado da sede, ou pode construir próximo à sede, mas será necessário desmatar uma grande área que possui diversas espécies de animais e árvores nativas.
+R1/ A) Escolho a opção próxima à sede, pensando na praticidade. /4/2/16/-16/0
+R2/ B) Escolho construir longe, a favor de preservar a natureza /4/4/16/-8/2
+R3/ C) Escolho não expandir, mantendo o negócio como está, mesmo deixando de gerar lucros. /0/0/-16/2/0
+R4/ D) Escolho expandir próximo à sede, mas apenas a metade do tamanho que havia pensado inicialmente. /2/2/8/-8/2
+FQ/
+P10/ 6- Como diretor de uma indústria química, você precisa priorizar uma estratégia para guiar a empresa nesse ano. Qual você escolhe? 
+R1/ A) Implementar programas de gestão de resíduos para reduzir, reutilizar e reciclar materiais em todas as etapas do processo produtivo. /0/2/8/16/2
+R2/ B) Investir em tecnologias capazes de aumentar a produção, para gerar mais lucros e substituir a mão de obra. /2/-2/8/-8/-16
+R3/ C) Aumentar a extração de recursos naturais, que são baratos, visando aumentar a produção e os lucros. /0/-2/8/-16/-4
+R4/ D) Minimizar custos desligando alguns funcionários e cortando programas de treinamento. /0/-2/-8/0/-16 
+FQ/
+P13/ 7- Você faz parte do Ministério do Meio Ambiente e recebeu um ótimo valor para investir na edificação do Ministério. Como decide gastar esse dinheiro? 
+R1/ A) Transição para energia renovável, com colocação de placas solares no edifício. /4/16/16/16/2 
+R2/ B) Mudança na decoração e móveis do edifício, para modernizar o ambiente. /0/-2/4/-8/-2
+R3/ C) Projeto de paisagismo que inclua um espaço interno e externo com diversas áreas verdes e espécies nativas. /0/8/2/8/2 
+R4/ D) Melhoria na instalação hidrossanitária, incluindo torneiras com fechamento automático, chuveiros com restritores de vazão e captação de água da chuva para reuso em descargas e irrigação. /0/8/2/4/2 
+FQ/
+P14/ 8- Você faz parte do Ministério do Meio Ambiente e deve escolher uma estratégia para lidar com a poluição. Qual você escolhe: 
+R1/ A) Implementar políticas de incentivo ao uso de transporte público e de veículos elétricos. /2/8/16/4/2
+R2/ B) Promover o plantio de árvores e a criação de áreas verdes urbanas para absorver poluentes atmosféricos e melhorar a qualidade do ar. /0/8/0/16/4 
+R3/ C) Desenvolver programas de conscientização e educação ambiental para incentivar práticas mais sustentáveis e a redução do consumo de recursos não renováveis. /0/8/0/16/4 
+R4/ D) Aumento os impostos sobre veículos para que as pessoas utilizem o transporte público. /2/0/0/4/-8
+FQ/
+P19/ 9-  Você mora no Planet LIfE, quais são seus hábitos?
+R1/ A) Não gosto de praticar exercícios físicos, mas tenho uma alimentação saudável e consumo principalmente de vendedores locais. /0/2/2/2/2
+R2/ B) Gosto de fazer exercícios no parque próximo a minha casa e tenho uma alimentação saudável baseada principalmente em alimentos orgânicos que compro na feira. /0/2/2/4/4
+R3/ C) Faço exercícios na academia do bairro e me alimento de forma consciente, consumindo principalmente alimentos orgânicos da feira. /0/2/4/4/4
+R4/ D) Não gosto de praticar exercícios físicos e prefiro me alimentar com comidas prontas que peço nos aplicativos de delivery pois não tenho tempo de cozinhar. /0/-2/4/-4/-4 
+FQ/
+P20/ 10-  Como morador do Planet LIfE, essas são suas práticas principais com relação a cozinha: 
+R1/ A)  Compro produtos locais e sazonais pois sei que isso reduz o transporte e a pegada de carbono. /0/2/0/4/2 
+R2/ B)  Possuo horta em casa e evito o consumo de proteínas de origem animal. /0/2/-4/4/2
+R3/ C)  Compro os alimentos em mercados próximos e feiras orgânicas da região. Evito desperdícios e além disso, possuo uma composteira para colocar os restos de comida. /0/2/0/4/2 
+R4/ D)  Faço uma alimentação prática, utilizo produtos industrializados e práticos. /0/-2/2/-4/-4 
+FA/
