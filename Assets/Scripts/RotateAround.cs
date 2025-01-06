@@ -16,25 +16,25 @@ public class RotateAround : MonoBehaviour
     public Quaternion origRot;
     public Light sLight;
     // Start is called before the first frame update
-    // void Start()
-    // {
-    //     origPos = transform.position;
-    //     origRot = transform.rotation;
-    // }
+    void Start()
+    {
+        origPos = transform.position;
+        origRot = transform.rotation;
+    }
 
-    // // Update is called once per frame
-    // void Update()
-    // {
-    //     if (needsToRotate == true)
-    //     {
-    //         //Debug.Log("Entrou no if");
-    //         // transform.RotateAround(pivotObject.transform.position, new Vector3(0, 0, 1), rotateSpeed * Time.deltaTime);
-    //         StartCoroutine(rotateAround());
-    //         needsToRotate = false;
-    //     }
+    // Update is called once per frame
+    void Update()
+    {
+        if (needsToRotate == true)
+        {
+            //Debug.Log("Entrou no if");
+            // transform.RotateAround(pivotObject.transform.position, new Vector3(0, 0, 1), rotateSpeed * Time.deltaTime);
+            StartCoroutine(rotateAround());
+            needsToRotate = false;
+        }
         
         
-    // }
+    }
 
     public IEnumerator lightCycle() 
     {

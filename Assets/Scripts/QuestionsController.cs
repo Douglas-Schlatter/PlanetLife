@@ -63,7 +63,6 @@ public class QuestionsController : MonoBehaviour
         q4Text.text = q1.answ4;
         
     }
-
     public Question GetLineAtIndex(int index, string[] lines)
     {
         //string[] lines = File.ReadAllLines(filePath);
