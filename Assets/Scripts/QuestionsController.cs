@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using TMPro;
+using System.Text.RegularExpressions;
 
 public class QuestionsController : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class QuestionsController : MonoBehaviour
     private string[] sections;
 
     //Questions Related
-    public int questIndex = 0;
+    private int questIndex = 1;
     public List<Question> questions = new List<Question>();
     public int quantQuest;
     public GameController gc;
@@ -51,7 +52,7 @@ public class QuestionsController : MonoBehaviour
         populAllQuest();
         calcMaxMinAbs();
         gStep = calcStep(targetStep);
-        //inicialização do game Controller depois de inicializar o Questions Controller
+        //inicializaï¿½ï¿½o do game Controller depois de inicializar o Questions Controller
         gm.setBaseScore();
         gm.AttCity();
         Question q1 = getRandomQuest();
@@ -62,6 +63,7 @@ public class QuestionsController : MonoBehaviour
         q4Text.text = q1.answ4;
         
     }
+
     public Question GetLineAtIndex(int index, string[] lines)
     {
         //string[] lines = File.ReadAllLines(filePath);
@@ -73,10 +75,15 @@ public class QuestionsController : MonoBehaviour
             //char test = lines[index].ToCharArray()[0];
             if (lines[currentLineIndex].ToCharArray()[0].Equals('P'))
             {
-                qInter.id = questIndex;
-                questIndex++;
+                //qInter.id = questIndex;
+                //questIndex++;
                 sections = lines[currentLineIndex].Split("/");
-                qInter.question = sections[1];
+                // Remove o padrÃ£o "P(nÃºmero)/ (nÃºmero)- " da pergunta
+                string pattern = @"\d+-\s";
+                //qInter.question = sections[1];
+                qInter.question = Regex.Replace(sections[1], pattern, "").Substring(1);
+
+
                 currentLineIndex++;
             }
             else if (lines[currentLineIndex].ToCharArray()[0].Equals('R') && lines[currentLineIndex].ToCharArray()[1].Equals('1'))//R1
@@ -89,7 +96,7 @@ public class QuestionsController : MonoBehaviour
                     qInter.answScores[0][ i-2] = float.Parse(sections[i]);
                     
                 }
-                //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questão
+                //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questï¿½o
                 currentLineIndex++;
             }
             else if (lines[currentLineIndex].ToCharArray()[0].Equals('R') && lines[currentLineIndex].ToCharArray()[1].Equals('2'))//R2
@@ -100,7 +107,7 @@ public class QuestionsController : MonoBehaviour
                 {
                     qInter.answScores[1][ i - 2] = float.Parse(sections[i]);
                 }
-                //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questão
+                //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questï¿½o
                 currentLineIndex++;
             }
             else if (lines[currentLineIndex].ToCharArray()[0].Equals('R') && lines[currentLineIndex].ToCharArray()[1].Equals('3'))//R3
@@ -111,7 +118,7 @@ public class QuestionsController : MonoBehaviour
                 {
                     qInter.answScores[2][ i - 2] = float.Parse(sections[i]);
                 }
-                //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questão
+                //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questï¿½o
                 currentLineIndex++;
             }
             else if (lines[currentLineIndex].ToCharArray()[0].Equals('R') && lines[currentLineIndex].ToCharArray()[1].Equals('4'))//R4
@@ -123,17 +130,17 @@ public class QuestionsController : MonoBehaviour
                 {
                     qInter.answScores[3][ i - 2] = float.Parse(sections[i]);
                 }
-                //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questão
+                //qInter.answ1Value = int.Parse(sections[2]); <- como era antes com somente uma questï¿½o
                 currentLineIndex++;
             }
-            else if (lines[currentLineIndex].ToCharArray()[0].Equals('F') && lines[currentLineIndex].ToCharArray()[1].Equals('Q'))// acabou essa questão
+            else if (lines[currentLineIndex].ToCharArray()[0].Equals('F') && lines[currentLineIndex].ToCharArray()[1].Equals('Q'))// acabou essa questï¿½o
             {
                 quantQuest++;
                 complete = true;
                 currentLineIndex++;
                 qInter.AttMaxMinScore();
             }
-            else if (lines[currentLineIndex].ToCharArray()[0].Equals('F') && lines[currentLineIndex].ToCharArray()[1].Equals('A'))// essa questão acabou e todas acabaram
+            else if (lines[currentLineIndex].ToCharArray()[0].Equals('F') && lines[currentLineIndex].ToCharArray()[1].Equals('A'))// essa questï¿½o acabou e todas acabaram
             {
                 quantQuest++;
                 qInter.AttMaxMinScore();
@@ -164,6 +171,11 @@ public class QuestionsController : MonoBehaviour
         {
             gc.acabouQuestions = true;
         }
+
+        // Adiciona o nÃºmero do Ã­ndice no comeÃ§o da pergunta no formato "(nÃºmero):"
+        rq.question = $"{questIndex}: {rq.question}";
+        questIndex++;
+
         return rq;
     }
 
@@ -240,7 +252,7 @@ public class QuestionsController : MonoBehaviour
         }
         else 
         {
-            Debug.Log("Não foi achado um valor para essa resposta");
+            Debug.Log("Nï¿½o foi achado um valor para essa resposta");
             return null;
         }
 
