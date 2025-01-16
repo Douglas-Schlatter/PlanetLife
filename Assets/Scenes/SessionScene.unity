@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.050502054, g: 0.15053193, b: 0.4088912, a: 1}
+  m_IndirectSpecularColor: {r: 0.050424587, g: 0.15088633, b: 0.40836856, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17266,7 +17266,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 240946865994962723, guid: 83ed65821b67f3940a83a713d4cb7cdd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1531903471}
   m_SourcePrefab: {fileID: 100100000, guid: 83ed65821b67f3940a83a713d4cb7cdd, type: 3}
 --- !u!1001 &1271633349
 PrefabInstance:
@@ -19434,6 +19438,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 279403060}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1531903467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 240946865994962723, guid: 83ed65821b67f3940a83a713d4cb7cdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1266941178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1531903471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531903467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d62b2b7f72d384da1e2e0473f2bd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetMaterial: {fileID: 0}
+  testColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &1534257035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 474446, guid: b18a65e0a50e1c24791d8a45283f0706,
@@ -19678,13 +19702,14 @@ GameObject:
   - component: {fileID: 1558458177}
   - component: {fileID: 1558458176}
   - component: {fileID: 1558458175}
+  - component: {fileID: 1558458178}
   m_Layer: 6
   m_Name: PlanetWithArt (1)
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &1558458175
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19714,7 +19739,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558458174}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 623003d47a4aefd43a5236f0e684cabc, type: 2}
   m_CullingMode: 0
@@ -19736,7 +19761,7 @@ Transform:
   m_GameObject: {fileID: 1558458174}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.88, y: -1.2991184, z: 0.54756635}
+  m_LocalPosition: {x: 2.1967163, y: -1.2991184, z: 0.54756635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19744,6 +19769,19 @@ Transform:
   - {fileID: 1186945097}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1558458178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558458174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d610f0b503bbfaf49abfb8a0ab446321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 10
 --- !u!1001 &1565036135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27336,7 +27374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &5720434980828478245
 PrefabInstance:
   m_ObjectHideFlags: 0
