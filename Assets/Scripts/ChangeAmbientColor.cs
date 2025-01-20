@@ -44,11 +44,11 @@ public class ChangeAmbientColor : MonoBehaviour
         if (planetMaterial.HasProperty(bottomColor))
         {
             planetMaterial.SetColor(bottomColor, newColor);
-            Debug.Log("TEM");
+            //Debug.Log("TEM");
         }
         else
         {
-            Debug.LogWarning("The material does not have a color property named " + "Bottom Color");
+            //Debug.LogWarning("The material does not have a color property named " + "Bottom Color");
         }
     }
 
