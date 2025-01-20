@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using TMPro;
 using System.Text.RegularExpressions;
+using UnityEngine.UI;
 
 public class QuestionsController : MonoBehaviour
 {
@@ -40,7 +41,12 @@ public class QuestionsController : MonoBehaviour
     //Step Related
     public float[] gStep = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
     public int targetStep = 6;
-   
+
+    public float waitTime = 10f;
+
+    public List<GameObject> answerButtons = new List<GameObject>();
+
+    // Start is called before the first frame updatepublic void Start()
     void Start()
     {
         //filePath = Application.dataPath + "/test.txt";  
@@ -61,6 +67,8 @@ public class QuestionsController : MonoBehaviour
         q2Text.text = q1.answ2;
         q3Text.text = q1.answ3;
         q4Text.text = q1.answ4;
+
+        StartCoroutine(WaitTimeButtons(waitTime));
         
     }
     public Question GetLineAtIndex(int index, string[] lines)
@@ -229,6 +237,8 @@ public class QuestionsController : MonoBehaviour
         q2Text.text = qn.answ2;
         q3Text.text = qn.answ3;
         q4Text.text = qn.answ4;
+
+        StartCoroutine(WaitTimeButtons(waitTime));
     }
     public float[] getRespValueByIndex( int question)
     {
@@ -257,6 +267,7 @@ public class QuestionsController : MonoBehaviour
 
     }
 
+
     public void NextLine()
     {
         
@@ -266,5 +277,24 @@ public class QuestionsController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    // Função que deixa os botões inativos por waitTime tempo
+    IEnumerator WaitTimeButtons(float waitTime)
+    {
+        // desativa o interactable dos botões de resposta
+        foreach (GameObject button in answerButtons)
+        {
+            button.GetComponent<Button>().interactable = false;
+        }
+
+        yield return new WaitForSeconds(waitTime);
+
+        // ativa o interactable dos botões de resposta
+        foreach (GameObject button in answerButtons)
+        {
+            button.GetComponent<Button>().interactable = true;
+        }
+
     }
 }
