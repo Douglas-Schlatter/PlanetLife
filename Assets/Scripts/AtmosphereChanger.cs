@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class AtmosphereChanger : MonoBehaviour
 {
-    private string atmosphereColorPolluted = "#FFD700";
-    private string atmosphereColorClean = "#000000";
+    public string atmosphereColorPolluted = "#FFD700";
+    public string atmosphereColorClean = "#000000";
     public Material atmosphereMaterial;
+    [Range(0, 100)] // Slider no editor para testar
+    public float transitionValue = 0;
+    public float t;
 
     void Awake()
     {
@@ -29,7 +32,11 @@ public class AtmosphereChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Normalizar o valor de 0 a 100 para 0 a 1
+        t = transitionValue / 100f;
+
+        // Muda a cor do material atmosphereMaterial
+        ChangeColorT(atmosphereColorClean, atmosphereColorPolluted, t);
     }
 
     // função para mudar a cor do basemap do material atmosphereMaterial
@@ -95,6 +102,17 @@ public class AtmosphereChanger : MonoBehaviour
         }
         atmosphereMaterial.color = colorTo;
        
+    }
+
+    public void ChangeColorT(string fromColor, string toColor, float t)
+    {
+        Color colorFrom = HexToColor(fromColor);
+        Color colorTo = HexToColor(toColor);
+
+        // Calcular a cor intermediária
+        Color currentColor = Color.Lerp(colorFrom, colorTo, t);
+
+        atmosphereMaterial.color = currentColor;
     }
 
 

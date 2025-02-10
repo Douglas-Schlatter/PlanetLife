@@ -280,7 +280,7 @@ public class QuestionsController : MonoBehaviour
     }
 
     // Função que deixa os botões inativos por waitTime tempo
-    IEnumerator WaitTimeButtons(float waitTime)
+    public IEnumerator WaitTimeButtons(float waitTime)
     {
         // desativa o interactable dos botões de resposta
         foreach (GameObject button in answerButtons)
