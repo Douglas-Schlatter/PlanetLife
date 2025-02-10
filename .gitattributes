@@ -10,3 +10,4 @@
 /Assets/Skybox[[:space:]]add-on/Images/Skybox_8.psd filter=lfs diff=lfs merge=lfs -text
 /Assets/Skybox[[:space:]]add-on/Images/Skybox_9.psd filter=lfs diff=lfs merge=lfs -text
 /Assets/SimplePoly[[:space:]]World/Models/Urban/Others/SPW_Demo[[:space:]]Scene_Urban.fbx filter=lfs diff=lfs merge=lfs -text
+/Assets/Fonts/NotoColorEmoji.ttf filter=lfs diff=lfs merge=lfs -text
