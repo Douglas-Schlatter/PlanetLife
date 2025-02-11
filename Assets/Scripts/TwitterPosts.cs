@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 public class TwitterPosts : MonoBehaviour
 {
@@ -17,10 +18,25 @@ public class TwitterPosts : MonoBehaviour
     public Transform content;
     public GameObject imageNewMessage;
     public TextMeshProUGUI newMessageText;
+    List<TwitterPost> posts;
 
     void Awake()
     {
-        LoadNames();
+        //LoadNames();
+
+        // Pega o arquivo json e guarda suas informações na classe TwitterPost
+        string jsonPath = Application.dataPath + "/pessoas.json";
+        string jsonData = System.IO.File.ReadAllText(jsonPath);
+        posts = JsonConvert.DeserializeObject<List<TwitterPost>>(jsonData);
+
+        // imprime o nome de cada pessoa
+        foreach (TwitterPost post in posts)
+        {
+            Debug.Log(post.nome);
+            Debug.Log(post.username);
+            Debug.Log(post.foto);
+        }
+
 
         // pega o prefab "X - Post"
         GameObject postPrefab = Resources.Load<GameObject>("X - Post");
@@ -89,7 +105,11 @@ public class TwitterPosts : MonoBehaviour
         TextMeshProUGUI postText = post.transform.Find("Text (TMP) Name").GetComponent<TextMeshProUGUI>();
 
         // Pega um nome aleatório da lista de nomes
-        string randomName = personNames[Random.Range(0, personNames.Count)];
+        //string randomName = personNames[Random.Range(0, personNames.Count)];
+        int randomIndex = Random.Range(0, posts.Count);
+        string randomName = posts[randomIndex].nome;
+
+
 
         // Adiciona o nome ao post
         postText.text = randomName;
@@ -104,6 +124,24 @@ public class TwitterPosts : MonoBehaviour
 
         // verifica se o texto de postText tem unicode e substitui pela imagem correspondente
         postTextText.text = ReplaceUnicodeWithImage(postTextText.text);
+
+
+        // pega a imagem do post de nome "Image Photo"
+        Image postImage = post.transform.Find("Image Photo").GetComponent<Image>();
+
+        // pega a imagem correspondente ao nome
+        Sprite image = Resources.Load<Sprite>(posts[randomIndex].foto);
+
+        // Adiciona a imagem ao post
+        postImage.sprite = image;
+
+        // pega o texto do post de nome "Text (TMP) Nickname"
+        TextMeshProUGUI postNickname = post.transform.Find("Text (TMP) Nickname").GetComponent<TextMeshProUGUI>();
+
+        // Adiciona o nome de usuário ao post
+        postNickname.text = "@" + posts[randomIndex].username;
+
+
         
 
         // verifica se o twitterPanel está ativo
@@ -164,4 +202,14 @@ public class TwitterPosts : MonoBehaviour
     }
 
     
+
+    
+}
+
+[System.Serializable]
+public class TwitterPost
+{
+    public string nome;
+    public string username;
+    public string foto;
 }

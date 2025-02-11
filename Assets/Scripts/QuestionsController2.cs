@@ -22,6 +22,9 @@ public class QuestionsController2 : MonoBehaviour
 
     public GameObject[] answerButtons;
 
+    public Image newspaper;
+    public GameObject earth;
+
     void Start()
     {
         string jsonPath = Application.dataPath + "/perguntas.json";
@@ -104,6 +107,13 @@ public class QuestionsController2 : MonoBehaviour
         atmosphereChanger.ChangeColorT(atmosphereChanger.atmosphereColorClean, atmosphereChanger.atmosphereColorPolluted, t);
 
 
+        // mostra o jornal
+        if(alternativa.news != null)
+        {
+            newspaper.GetComponentInChildren<TextMeshProUGUI>().text = alternativa.news;
+            MoveEarthAndNewspaper();
+        }
+
     
 
         //remove a pergunta atual da lista
@@ -121,6 +131,49 @@ public class QuestionsController2 : MonoBehaviour
         }
         
         
+    }
+
+    // Função para mostrar o jornal
+    public void MoveEarthAndNewspaper()
+    {
+        StartCoroutine(MoveObjects());
+    }
+
+    private IEnumerator MoveObjects()
+    {
+        Vector3 originalEarthPosition = earth.transform.position;
+        Vector3 originalNewspaperPosition = newspaper.transform.position;
+
+        Vector3 targetEarthPosition = originalEarthPosition + new Vector3(0, -2.8f, 0); // Ajuste o valor conforme necessário
+        Vector3 targetNewspaperPosition = originalNewspaperPosition + new Vector3(0, -5, 0); // Ajuste o valor conforme necessário
+
+        float duration = 1f; // Duração do movimento
+        float elapsedTime = 0;
+
+        while (elapsedTime < duration)
+        {
+            earth.transform.position = Vector3.Lerp(originalEarthPosition, targetEarthPosition, elapsedTime / duration);
+            newspaper.transform.position = Vector3.Lerp(originalNewspaperPosition, targetNewspaperPosition, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        earth.transform.position = targetEarthPosition;
+        newspaper.transform.position = targetNewspaperPosition;
+
+        yield return new WaitForSeconds(10f); // Espera 10 segundos
+
+        elapsedTime = 0;
+        while (elapsedTime < duration)
+        {
+            earth.transform.position = Vector3.Lerp(targetEarthPosition, originalEarthPosition, elapsedTime / duration);
+            newspaper.transform.position = Vector3.Lerp(targetNewspaperPosition, originalNewspaperPosition, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        earth.transform.position = originalEarthPosition;
+        newspaper.transform.position = originalNewspaperPosition;
     }
 
     private void Shuffle(List<string> list)
@@ -174,4 +227,5 @@ public class Alternativa
     public int[] impacto;
     public int[] ambiental;
     public List<string> tweets;
+    public string news;
 }
