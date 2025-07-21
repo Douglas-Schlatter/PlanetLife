@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
+using System.IO;
 
 public class TwitterPosts : MonoBehaviour
 {
@@ -25,8 +26,12 @@ public class TwitterPosts : MonoBehaviour
         //LoadNames();
 
         // Pega o arquivo json e guarda suas informações na classe TwitterPost
-        string jsonPath = Application.dataPath + "/pessoas.json";
-        string jsonData = System.IO.File.ReadAllText(jsonPath);
+        //string jsonPath = Application.dataPath + "/pessoas.json";
+        //string jsonData = System.IO.File.ReadAllText(jsonPath);
+        //posts = JsonConvert.DeserializeObject<List<TwitterPost>>(jsonData);
+
+        string jsonPath = Path.Combine(Application.streamingAssetsPath, "pessoas.json");
+        string jsonData = File.ReadAllText(jsonPath);
         posts = JsonConvert.DeserializeObject<List<TwitterPost>>(jsonData);
 
         // imprime o nome de cada pessoa
@@ -39,7 +44,7 @@ public class TwitterPosts : MonoBehaviour
 
 
         // pega o prefab "X - Post"
-        GameObject postPrefab = Resources.Load<GameObject>("X - Post");
+        GameObject postPrefab = Resources.Load<GameObject>("X - Post 2");
 
     }
 
@@ -71,6 +76,8 @@ public class TwitterPosts : MonoBehaviour
     public void CloseTwitter()
     {
         twitterPanel.SetActive(false);
+
+
     }
 
     public void OpenTwitter()
@@ -108,8 +115,6 @@ public class TwitterPosts : MonoBehaviour
         //string randomName = personNames[Random.Range(0, personNames.Count)];
         int randomIndex = Random.Range(0, posts.Count);
         string randomName = posts[randomIndex].nome;
-
-
 
         // Adiciona o nome ao post
         postText.text = randomName;
@@ -159,6 +164,58 @@ public class TwitterPosts : MonoBehaviour
         }
         
     }
+
+    public void CreatePost2(string tweet)
+    {
+        // Pega o prefab "X - Post"
+        GameObject postPrefab = Resources.Load<GameObject>("X - Post 2");
+
+        // Instancia o prefab
+        GameObject post = Instantiate(postPrefab, content);
+
+        // Mover o post para o topo da lista
+        post.transform.SetSiblingIndex(0);
+
+        // escolhe um nome aleatório da lista de pessoas
+        int randomIndex = Random.Range(0, posts.Count);
+        string username = posts[randomIndex].username;
+        string nome = posts[randomIndex].nome;
+        string foto = posts[randomIndex].foto;
+
+        TextMeshProUGUI postUsername = post.transform.Find("Text (TMP) Username").GetComponent<TextMeshProUGUI>();
+        //postUsername.text = username;
+
+        // Adiciona o nome de usuário ao post
+        postUsername.text = "@" + username;
+
+        Image postImage = post.transform.Find("Image Profile Photo").GetComponent<Image>();
+        Sprite image = Resources.Load<Sprite>(foto);
+        postImage.sprite = image;
+
+        TextMeshProUGUI postText = post.transform.Find("Text (TMP) PostText").GetComponent<TextMeshProUGUI>();
+        postText.text = tweet;
+
+
+        // pega o texto em newMessageText, convertendo para int e incrementa
+        int newMessage = int.Parse(newMessageText.text) + 1;
+        // converte o int para string e adiciona ao newMessageText
+        newMessageText.text = newMessage.ToString();
+
+
+
+
+
+    }
+
+    public void ClearPosts()
+    {
+        // Limpa todos os posts
+        foreach (Transform child in content)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
 
     string HighlightHashtags(string inputText)
     {

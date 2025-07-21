@@ -1,0 +1,99 @@
+[
+    {
+        "nome": "João da Silva",
+        "username": "joao.silva",
+        "foto": "boy-1"
+    },
+    {
+        "nome": "Maria da Silva",
+        "username": "maria.silva",
+        "foto": "girl-8"
+    },
+    {
+        "nome": "José Barboza",
+        "username": "ze_barboza",
+        "foto": "boy-2"
+    },
+    {
+        "nome": "Ana da Silva",
+        "username": "ana.silva",
+        "foto": "girl-10"
+    },
+    {
+        "nome": "Pedro Sampaio",
+        "username": "pedro.sampaio",
+        "foto": "boy-3"
+    },
+    {
+        "nome": "Paulo Martins",
+        "username": "paulo.martins",
+        "foto": "boy-4"
+    },
+    {
+        "nome": "Carlos Gonçalves",
+        "username": "carlos.gonca",
+        "foto": "boy-5"
+    },
+    {
+        "nome": "Antônio da Silva",
+        "username": "antonio.silva",
+        "foto": "boy-6"
+    },
+    {
+        "nome": "Luiz Felipe",
+        "username": "luiz_flip",
+        "foto": "boy-1"
+    },
+    {
+        "nome": "Francisco de Magalhães",
+        "username": "chico_magalhaes",
+        "foto": "boy-2"
+    },
+    {
+        "nome": "Marcos Assis",
+        "username": "marcos_assis",
+        "foto": "boy-3"
+    },
+    {
+        "nome": "Ricardo Mendes",
+        "username": "ricardo_mendes",
+        "foto": "boy-4"
+    },
+    {
+        "nome": "Fernando da Silva",
+        "username": "fernando_silva",
+        "foto": "boy-5"
+    },
+    {
+        "nome": "Roberto Carlos",
+        "username": "roberto_carlos",
+        "foto": "boy-6"
+    },
+    {
+        "nome": "Eduardo Santana",
+        "username": "eduardo_santana",
+        "foto": "boy-1"
+    },
+    {
+        "nome": "Rafael Gomes",
+        "username": "rafael_gomes",
+        "foto": "boy-2"
+    },
+    {
+        "nome": "Márcia Oliveira",
+        "username": "marcia_Oliveira",
+        "foto": "girl-12"
+    },
+    {
+        "nome": "Sandra Rocha",
+        "username": "sandra_rocha",
+        "foto": "girl-13"
+    },
+    {
+        "nome": "Carla Siqueira",
+        "username": "carla_siqueira",
+        "foto": "girl-14"
+    }
+
+
+]

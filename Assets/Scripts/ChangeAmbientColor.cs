@@ -1,72 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+//using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChangeAmbientColor : MonoBehaviour
 {
     public Material planetMaterial;
-    public Color testColor = Color.red;
-    private string bottomColor = "_Bottom_Color";
-    private string midColor = "_Mid_Color";
-    private string topColor = "_TopColor";
-    
-    private string endWaterColor = "#482D24";
-    private string endGroundColor = "#84741F";
 
-    void Awake()
+    [Header("Hex Colors")]
+    public string endWaterColorHex = "#482D24";
+    public string endGroundColorHex = "#84741F";
+
+    [Header("Material Color Properties")]
+    public string bottomColor = "_Bottom_Color";
+    public string midColor = "_Mid_Color";
+    public string topColor = "_TopColor";
+
+    [Header("Ground Transition")]
+    [Range(0, 100)] public float transitionValueGround = 0;
+    public float tGround;
+    public Color startGroundColor;
+    public Color endGroundColor;
+
+    [Header("Water Transition")]
+    [Range(0, 100)] public float transitionValueWater = 0;
+    public float tWater;
+    public Color startWaterColor;
+    public Color endWaterColor;
+
+    private void Awake()
     {
         planetMaterial = GetComponent<Renderer>().material;
         Debug.Log("Material name: " + planetMaterial.name);
+
+        // Salvar cores iniciais
+        startGroundColor = planetMaterial.GetColor(midColor);
+        startWaterColor = planetMaterial.GetColor(bottomColor);
+
+        // Converter hex para Color
+        endGroundColor = HexToColor(endGroundColorHex);
+        endWaterColor = HexToColor(endWaterColorHex);
     }
 
-    void Start()
+    private void Update()
     {
-        //ChangeWaterColor(testColor);
+        // Normalizar de 0 a 1
+        tGround = transitionValueGround / 100f;
+        tWater = transitionValueWater / 100f;
 
-        Color colorWater = planetMaterial.GetColor(bottomColor);
-        // Convert hex to color
-        Color colorWaterEnd = new Color();
-        UnityEngine.ColorUtility.TryParseHtmlString(endWaterColor, out colorWaterEnd);
-
-        FromColorToAnother(colorWater, colorWaterEnd, 20, bottomColor);
-
-        Color colorGround = planetMaterial.GetColor(midColor);
-        // Convert hex to color
-        Color colorGroundEnd = new Color();
-        UnityEngine.ColorUtility.TryParseHtmlString(endGroundColor, out colorGroundEnd);
-
-        FromColorToAnother(colorGround, colorGroundEnd, 20, midColor);
+        // Interpola cores
+        ChangeColorT(startGroundColor, endGroundColor, tGround, midColor);
+        ChangeColorT(startWaterColor, endWaterColor, tWater, bottomColor);
     }
 
-    public void ChangeWaterColor(Color newColor)
+    public Color HexToColor(string hex)
     {
-        if (planetMaterial.HasProperty(bottomColor))
-        {
-            planetMaterial.SetColor(bottomColor, newColor);
-            //Debug.Log("TEM");
-        }
-        else
-        {
-            //Debug.LogWarning("The material does not have a color property named " + "Bottom Color");
-        }
+        Color color = new Color();
+        ColorUtility.TryParseHtmlString(hex, out color);
+        color.a = 1f;
+        return color;
     }
 
-    public void FromColorToAnother(Color fromColor, Color toColor, float duration, string field)
+    public void ChangeColorT(Color fromColor, Color toColor, float t, string property)
     {
-        StartCoroutine(ChangeColor(fromColor, toColor, duration, field));
-    }
-
-    private IEnumerator ChangeColor(Color fromColor, Color toColor, float duration, string field)
-    {
-        float timeElapsed = 0;
-        while (timeElapsed < duration)
-        {
-            planetMaterial.SetColor(field, Color.Lerp(fromColor, toColor, timeElapsed / duration));
-            timeElapsed += Time.deltaTime;
-            yield return null;
-        }
-        planetMaterial.SetColor(field, toColor);
+        Color currentColor = Color.Lerp(fromColor, toColor, t);
+        planetMaterial.SetColor(property, currentColor);
     }
 
 }

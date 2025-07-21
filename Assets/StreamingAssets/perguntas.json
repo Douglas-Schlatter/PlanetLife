@@ -1,0 +1,1062 @@
+{
+    "P1": {
+        "pergunta": "1- Como representante do banco, você precisa escolher apenas um cliente para liberar um empréstimo. Qual você escolhe?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Cliente 1- Precisa de um grande empréstimo para abrir uma fábrica de cosméticos. No plano de negócios não há medidas sustentáveis.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Cliente 2- Precisa de um empréstimo para abrir uma loja de produtos orgânicos e saudáveis. O plano de negócios inclui medidas sustentáveis, mas o valor do empréstimo é baixo.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Cliente 3- Precisa de um grande empréstimo para expandir seu negócio de tecnologia. Possui um plano de negócios sólido e sustentável.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Cliente 4- Precisa de um grande empréstimo para construir um hospital privado. Não há medidas sustentáveis na edificação.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P2": {
+        "pergunta": "2- Você e alguns sócios decidiram iniciar um banco digital. Qual vai ser o principal objetivo:",
+        "alternativas": {
+            "A": {
+                "texto": "A) Investir em projetos de energia renovável e eficiência energética.",
+                "impactoAtmosferico": -30,
+                "impactoSolo": -30,
+                "impactoHidrico": -30,
+                "governo": 30,
+                "empresas": 30,
+                "sociedade": 20,
+                "tweets": ["Finalmente um banco que pensa no futuro! Apostar em energia renovável é apostar na vida. #PlanetBank #EnergiaLimpa", "Muito feliz em ver iniciativas bancárias focadas em sustentabilidade! Precisamos de mais empresas com esse tipo de visão. #BancoVerde", "Meu dinheiro em um banco que investe em energia limpa? Sim, por favor! #PlanetBank #ConsciênciaAmbiental"],
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Oferecer linhas de crédito com juros subsidiados para empresas que adotam práticas sustentáveis.",
+                "impactoAtmosferico": -20,
+                "impactoSolo": -20,
+                "impactoHidrico": -20,
+                "governo": 20,
+                "empresas": 20,
+                "sociedade": 10,
+                "tweets": ["Curti a proposta do PlanetBank. Incentivar empresas sustentáveis com crédito mais barato é um baita passo! #FinançasVerdes", "Esse tipo de iniciativa mostra que dá pra ser rentável sem destruir o planeta. Apoiado! #CréditoSustentável #PlanetBank", "As pequenas e médias empresas verdes agradecem essa oportunidade! Que venham mais bancos assim. "],
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Investir em projetos que possuam uma boa proposta de negócios, mesmo que não sejam sustentáveis.",
+                "impactoAtmosferico": 30,
+                "impactoSolo": 30,
+                "impactoHidrico": 30,
+                "governo": -15,
+                "empresas": -15,
+                "sociedade": -20,
+                "tweets": null,
+                "instas": null,
+                "news": "PlanetBank - O novo banco digital para o seu negócio"
+            },
+            "D": {
+                "texto": "D) Investir em projetos agrícolas, devido à alta rentabilidade para o banco.",
+                "impactoAtmosferico": 20,
+                "impactoSolo": 20,
+                "impactoHidrico": 20,
+                "governo": -10,
+                "empresas": -10,
+                "sociedade": -1,
+                "tweets": null,
+                "instas": null,
+                "news": "PlanetBank - O banco digital do agronegócio"
+            }
+        }
+    },
+    "P3": {
+        "pergunta": "3- Você possui um banco e quer incentivar práticas sustentáveis entre seus clientes e contribuir para a preservação ambiental. Quais ações você vai adotar:",
+        "alternativas": {
+            "A": {
+                "texto": "A) Oferecer linhas de crédito com taxas reduzidas para projetos de energia renovável, incentivando empresas e indivíduos a investirem em fontes de energia limpas, como solar e eólica.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Investir em empresas que desmatam áreas protegidas, buscando maximizar lucros independentemente dos impactos ambientais.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Criar programas de recompensas para clientes que utilizam serviços bancários digitais, reduzindo o uso de papel e promovendo a digitalização dos processos.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Financiar apenas projetos de infraestrutura que utilizam práticas de construção sustentável, garantindo que os empreendimentos apoiados pelo banco respeitem normas ambientais rigorosas.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P4": {
+        "pergunta": "4- Qual estratégia um banco pode adotar para alinhar seus investimentos com os objetivos de desenvolvimento sustentável?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Criar um fundo de investimento focado em empresas de tecnologia limpa e agricultura sustentável.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Continuar financiando indústrias altamente poluentes, sem considerar os impactos ambientais e sociais, visando apenas o retorno financeiro a curto prazo.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Lançar programas de educação financeira que incluam a conscientização sobre investimentos responsáveis, ajudando os clientes a entenderem como suas escolhas financeiras podem influenciar o meio ambiente.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Priorizar empréstimos para projetos que seguem práticas de economia circular, onde os resíduos são minimizados e os recursos são reutilizados, promovendo a sustentabilidade em toda a cadeia produtiva.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P5": {
+        "pergunta": "5- Você precisa  escolher um projeto de Lei para aprovar. Qual você escolhe?",
+        "alternativas": {
+            "A": {
+                "texto": "A) PL 1 - Construção de uma ciclovia na via principal da cidade para estimular a população a utilizar menos os carros e promover a prática de exercícios.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!", "bbbbbbbbbbbbbbb!", "ccccccccccccccccccccccccc!"],
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) PL 2 - Construção de uma estrada para interligar duas cidades. ",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) PL 3 - Programa de habitação de interesse social, com medidas sustentáveis.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) PL 4 - Revitalização da praça central da cidade, que estava abandonada, e incentivo do comércio na região.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P6": {
+        "pergunta": "6- A cidade que você governa no Planet LIfE é a que mais consome água. Qual dessas medidas você decide tomar para reduzir o consumo?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Campanhas de conscientização nas mídias sociais e TV sobre uso racional da água.",
+                "impactoAtmosferico": -25,
+                "impactoSolo": -25,
+                "impactoHidrico": -25,
+                "governo": 30,
+                "empresas": 30,
+                "sociedade": 20,
+                "tweets": ["Simples, eficaz e educativo. Conscientizar é o primeiro passo pra mudar o futuro! #UsoConsciente #PlanetLife", "Adorei ver a prefeitura usando as redes pra ensinar a economizar água. Bora fazer nossa parte! #ÁguaÉVida", "Essas campanhas sobre economia de água estão incríveis! Se cada um colaborar um pouquinho, já faz diferença. #Sustentabilidade"],
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Implementação de sistemas de reuso de água em edifícios comerciais e públicos.",
+                "impactoAtmosferico": -30,
+                "impactoSolo": -30,
+                "impactoHidrico": -30,
+                "governo": 20,
+                "empresas": 20,
+                "sociedade": 10,
+                "tweets": null,
+                "instas": null,
+                "news": "A partir de agora edifícios comerciais e públicos devem ter sistema de reúso de água inteligente"
+            },
+            "C": {
+                "texto": "C) Aumento na tarifa da água.",
+                "impactoAtmosferico": 25,
+                "impactoSolo": 25,
+                "impactoHidrico": 25,
+                "governo": -10,
+                "empresas": -10,
+                "sociedade": -15,
+                "tweets": null,
+                "instas": null,
+                "news": "Polêmica! A tarifa da água vai subir 2% no próximo mês"
+            },
+            "D": {
+                "texto": "D) Implementar cortes programados no fornecimento de água em bairros residenciais em determinados horários.",
+                "impactoAtmosferico": 25,
+                "impactoSolo": 25,
+                "impactoHidrico": 25,
+                "governo": -10,
+                "empresas": -15,
+                "sociedade": -20,
+                "tweets": ["Absurdo! Ficar sem água todo dia em pleno 2025? Isso é gestão ou punição? #Indignação #PlanetLife", "Corte de água programado? Que tal programar uma solução de verdade, prefeito? #CriseHídrica #CadêAGestão", "A culpa da população é menor que a do sistema, mas quem sofre com o racionamento somos nós. Injusto demais. #ÁguaParaTodos"],
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P7": {
+        "pergunta": "7- Você governa uma das maiores cidades do Planet LIfE e quer torná-la mais sustentável. Quais modificações são prioridades na sua gestão?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Incentivar a instalação de placas solares nas residências através da diminuição de taxas e impostos.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Incentivar a economia de água e energia elétrica, através do aumento do preço desses serviços.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Aumentar o desempenho energético dos edifícios do governo.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Criar programas para incentivar a reciclagem e a coleta correta dos resíduos domésticos.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P8": {
+        "pergunta": "8- Qual seria uma ação governamental eficaz para promover a sustentabilidade e reduzir a emissão de gases de efeito estufa no setor de transporte?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Subsidiar a compra de veículos elétricos e híbridos, incentivando a população a optar por meios de transporte com menor impacto ambiental.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Reduzir os investimentos em transporte público, forçando mais pessoas a utilizarem veículos particulares e, consequentemente, aumentando as emissões.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Eliminar as regulamentações sobre emissões veiculares, permitindo que os fabricantes produzam veículos menos eficientes em termos de consumo de combustível.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Promover o desenvolvimento de infraestruturas para ciclovias e transportes públicos eficientes, como trens e ônibus elétricos, diminuindo a dependência de veículos particulares movidos a combustíveis fósseis.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P9": {
+        "pergunta": "9- Você é o diretor de uma indústria de alimentos e está pensando em expandir sua fábrica. Para isso, você pode realizar a construção num local mais afastado da sede, ou pode construir próximo à sede, mas será necessário desmatar uma grande área que possui diversas espécies de animais e árvores nativas.",
+        "alternativas": {
+            "A": {
+                "texto": "A) Escolho a opção próxima à sede, pensando na praticidade.",
+                "impactoAtmosferico": 25,
+                "impactoSolo": 25,
+                "impactoHidrico": 25,
+                "governo": -10,
+                "empresas": -10,
+                "sociedade": -15,
+                "tweets": null,
+                "instas": null,
+                "news": "Planet LIfE Alimentos fará ampliação visando logística apesar da supressão de áreas verdes!"
+            },
+            "B": {
+                "texto": "B) Escolho construir longe, a favor de preservar a natureza.",
+                "impactoAtmosferico": -25,
+                "impactoSolo": -25,
+                "impactoHidrico": -25,
+                "governo": 20,
+                "empresas": 25,
+                "sociedade": 30,
+                "tweets": ["Atitude consciente da Planet Life Alimentos! Preservar o meio ambiente vale mais que economizar no transporte. #ExpansãoSustentável", "Respeito por empresas que pensam no impacto ambiental antes do lucro. Que sirva de exemplo! #NaturezaAgradece", "Ir mais longe pra não destruir habitats? Isso sim é visão de longo prazo. #IndústriaResponsável"],
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Escolho não expandir, mantendo o negócio como está, mesmo deixando de gerar lucros.",
+                "impactoAtmosferico": -30,
+                "impactoSolo": -30,
+                "impactoHidrico": -30,
+                "governo": 20,
+                "empresas": 20,
+                "sociedade": 10,
+                "tweets": ["Decisão corajosa! Abrir mão de lucro pra proteger o meio ambiente mostra caráter. #ConsciênciaAmbiental", "Nem toda empresa colocaria a ética acima do crescimento. Me ganhou, Planet Life! #SustentabilidadeReal", "Dá orgulho ver que ainda existem gestores que escolhem preservar em vez de explorar. #FuturoVerde"],
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Escolho expandir próximo à sede, mas apenas a metade do tamanho que havia pensado inicialmente.",
+                "impactoAtmosferico": 20,
+                "impactoSolo": 20,
+                "impactoHidrico": 20,
+                "governo": -10,
+                "empresas": -10,
+                "sociedade": -15,
+                "tweets": ["Meio termo que parece mais marketing do que solução. Ainda assim, os animais perderam espaço. #PelaMetade", "Reduziu o impacto, mas ainda desmatou. Que tal buscar alternativas realmente sustentáveis da próxima vez? #HipocrisiaVerde", "A gente espera progresso com responsabilidade, não concessão com impacto alto. #DesmatamentoParcialAindaÉDesmatamento"],
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P10": {
+        "pergunta": "10- Como diretor de uma indústria química, você precisa priorizar uma estratégia para guiar a empresa nesse ano. Qual você escolhe?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Implementar programas de gestão de resíduos para reduzir, reutilizar e reciclar materiais em todas as etapas do processo produtivo.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Investir em tecnologias capazes de aumentar a produção, para gerar mais lucros e substituir a mão de obra.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Aumentar a extração de recursos naturais, que são baratos, visando aumentar a produção e os lucros.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Minimizar custos desligando alguns funcionários e cortando programas de treinamento.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P11": {
+        "pergunta": "11- Qual estratégia uma indústria pode adotar para reduzir seu impacto ambiental sem comprometer a produção?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Investir em tecnologia de reciclagem de resíduos industriais, permitindo que materiais sejam reutilizados no processo produtivo, reduzindo a necessidade de extração de novos recursos.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Aumentar o uso de combustíveis fósseis na produção de energia, visando baixar os custos operacionais, mesmo que isso aumente a emissão de gases poluentes.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Implementar programas de eficiência energética nas fábricas, otimizando o uso de energia através de equipamentos modernos e processos mais eficientes, o que reduz o consumo e a pegada de carbono.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Deslocar a produção para áreas de preservação ambiental, aproveitando recursos naturais sem considerar os impactos ecológicos dessa ação.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P12": {
+        "pergunta": "12- Você atua numa indústria que quer preservar os recursos hídricos, garantindo a sustentabilidade em suas operações, qual opção você escolhe:",
+        "alternativas": {
+            "A": {
+                "texto": "A) Adotar processos de tratamento e reuso da água utilizada na produção, reduzindo o consumo total e evitando o despejo de efluentes poluídos nos corpos d'água.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Aumentar a captação de água diretamente dos rios e aquíferos, sem realizar o tratamento adequado, para garantir uma produção mais barata e rápida.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Utilizar produtos químicos altamente tóxicos na limpeza dos maquinários, sem considerar o impacto que esses produtos podem ter quando descartados na água.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Desenvolver parcerias com organizações ambientais, focando em iniciativas de proteção de nascentes e recuperação de áreas de bacia hidrográfica afetadas.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P13": {
+        "pergunta": "13- Você faz parte do Ministério do Meio Ambiente e recebeu um ótimo valor para investir na edificação do Ministério. Como decide gastar esse dinheiro?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Transição para energia renovável, com colocação de placas solares no edifício.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Mudança na decoração e móveis do edifício, para modernizar o ambiente.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Projeto de paisagismo que inclua um espaço interno e externo com diversas áreas verdes e espécies nativas.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Melhoria na instalação hidrossanitária, incluindo torneiras com fechamento automático, chuveiros com restritores de vazão e captação de água da chuva para reuso em descargas e irrigação.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P14": {
+        "pergunta": "14- Você faz parte do Ministério do Meio Ambiente e deve escolher uma estratégia para lidar com a poluição. Qual você escolhe:",
+        "alternativas": {
+            "A": {
+                "texto": "A) Implementar políticas de incentivo ao uso de transporte público e de veículos elétricos.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Promover o plantio de árvores e a criação de áreas verdes urbanas para absorver poluentes atmosféricos e melhorar a qualidade do ar.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Desenvolver programas de conscientização e educação ambiental para incentivar práticas mais sustentáveis e a redução do consumo de recursos não renováveis.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Aumento os impostos sobre veículos para que as pessoas utilizem o transporte público.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P15": {
+        "pergunta": "15- Você faz parte do Ministério do Meio Ambiente e precisa decidir uma alternativa para reduzir a poluição das águas em uma cidade. Qual você escolhe:",
+        "alternativas": {
+            "A": {
+                "texto": "A) Incentivar a construção de novas fábricas sem tratamento de resíduos.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Criar programas de educação ambiental para a população.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Permitindo o despejo de esgoto não tratado diretamente nos rios.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Aumentar o uso de fertilizantes químicos nas áreas agrícolas.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P16": {
+        "pergunta": "16-  Qual seria uma medida eficaz que o Ministério do Meio Ambiente poderia adotar para combater o desmatamento ilegal na Amazônia?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Ampliar as áreas protegidas e reservas indígenas, garantindo que grandes porções de floresta permaneçam intocadas e sob vigilância constante.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Incentivar a agricultura de grande escala em áreas de floresta, permitindo que o setor agrícola se expanda em áreas preservadas.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Reduzir o número de fiscais ambientais na região, diminuindo a fiscalização das atividades madeireiras e agrícolas ilegais.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Promover o reflorestamento e a recuperação de áreas degradadas, com incentivos para empresas e comunidades locais que participem de programas de reflorestamento.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P17": {
+        "pergunta": "17- Você quer se mudar para uma cidade localizada no Planet LIfE e está procurando um imóvel para comprar. Qual das opções você escolhe?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Apartamento em um bairro arborizado, com feira orgânica e praças próximas para fazer caminhadas.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Casa no interior da cidade, com espaço para cultivar uma horta e ter alguns animais.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Apartamento mais afastado, em um bairro com pouca estrutura mas que se adequa mais ao orçamento.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Casa afastada, mas não tem problema, pois posso me deslocar de carro.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P18": {
+        "pergunta": "18-  Como morador do Planet LIfE, quais medidas você adota para favorecer a sustentabilidade na sua cidade?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Desenvolvo um programa de reciclagem no condomínio onde moro, em parceria com os vizinhos e o síndico.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B) Reduzo o consumo de água e energia em minha residência.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Nenhuma medida, pois o Planet LIfE já é sustentável.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Participo de grupos voluntários que limpam as cidades e fazem reflorestamento e preservação de áreas verdes.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    },
+    "P19": {
+        "pergunta": "19-  Você mora no Planet LIfE, quais são seus hábitos?",
+        "alternativas": {
+            "A": {
+                "texto": "A) Não gosto de praticar exercícios físicos, mas tenho uma alimentação saudável e consumo principalmente de vendedores locais.",
+                "impactoAtmosferico": -30,
+                "impactoSolo": -30,
+                "impactoHidrico": -30,
+                "governo": 10,
+                "empresas": 10,
+                "sociedade": 5,
+                "tweets": null,
+                "instas": null,
+                "news": "Pequenos passos em direção a uma vida saudável já fazem a diferença"
+            },
+            "B": {
+                "texto": "B) Gosto de fazer exercícios no parque próximo a minha casa e tenho uma alimentação saudável baseada principalmente em alimentos orgânicos que compro na feira.",
+                "impactoAtmosferico": -25,
+                "impactoSolo": -25,
+                "impactoHidrico": -25,
+                "governo": 15,
+                "empresas": 15,
+                "sociedade": 10,
+                "tweets": ["Comecei a correr no parque todo dia e tô me sentindo outra pessoa! Ainda passo na feirinha e levo só coisa boa pra casa! #VidaSaudável #Orgânicos", "Nada melhor do que cuidar do corpo e da alimentação ao ar livre. Natureza, feira e saúde andam juntas! #PlanetaEquilibrado", "Fazer exercício no parque + comprar direto da feira = receita simples pra viver melhor e ajudar o planeta. #RotinaConsciente"],
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C) Faço exercícios na academia do bairro e me alimento de forma consciente, consumindo principalmente alimentos orgânicos da feira.",
+                "impactoAtmosferico": 20,
+                "impactoSolo": 20,
+                "impactoHidrico": 20,
+                "governo": -10,
+                "empresas": -10,
+                "sociedade": -20,
+                "tweets": ["Orgânicos na feira, treino na academia do bairro... tentando equilibrar tudo! #SaúdeEmDia", "Treino firme, alimentação limpa. Só faltava o planeta colaborar mais também né? #VidaAtiva #ConsumoConsciente", "Alimentos orgânicos + rotina de exercícios = qualidade de vida. Mas será que minha academia é tão sustentável assim? #BairroFitness"],
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D) Não gosto de praticar exercícios físicos e prefiro me alimentar com comidas prontas que peço nos aplicativos de delivery pois não tenho tempo de cozinhar.",
+                "impactoAtmosferico": 30,
+                "impactoSolo": 30,
+                "impactoHidrico": 30,
+                "governo": -10,
+                "empresas": -10,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": "Comidas prontas implicam em uma grande produção de embalagens com difícil reciclabilidade como o isopor"
+            }
+        }
+    },
+    "P20": {
+        "pergunta": "20-  Como morador do Planet LIfE, essas são suas práticas principais com relação a cozinha:",
+        "alternativas": {
+            "A": {
+                "texto": "A)  Compro produtos locais e sazonais pois sei que isso reduz o transporte e a pegada de carbono.",
+                "impactoAtmosferico": -5,
+                "impactoSolo": -5,
+                "impactoHidrico": -5,
+                "governo": 3,
+                "empresas": 3,
+                "sociedade": 2,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "B": {
+                "texto": "B)  Possuo horta em casa e evito o consumo de proteínas de origem animal.",
+                "impactoAtmosferico": -3,
+                "impactoSolo": -3,
+                "impactoHidrico": -3,
+                "governo": 2,
+                "empresas": 2,
+                "sociedade": 1,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "C": {
+                "texto": "C)  Compro os alimentos em mercados próximos e feiras orgânicas da região. Evito desperdícios e além disso, possuo uma composteira para colocar os restos de comida.",
+                "impactoAtmosferico": 5,
+                "impactoSolo": 5,
+                "impactoHidrico": 5,
+                "governo": -2,
+                "empresas": -2,
+                "sociedade": -3,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            },
+            "D": {
+                "texto": "D)  Faço uma alimentação prática, utilizo produtos industrializados e práticos.",
+                "impactoAtmosferico": 10,
+                "impactoSolo": 10,
+                "impactoHidrico": 10,
+                "governo": -4,
+                "empresas": -4,
+                "sociedade": -5,
+                "tweets": null,
+                "instas": null,
+                "news": null
+            }
+        }
+    }
+}

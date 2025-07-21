@@ -1,0 +1,479 @@
+{
+    "P1": {
+      "pergunta": "Como representante do banco, você precisa escolher apenas um cliente para liberar um empréstimo. Qual você escolhe?",
+      "alternativas": {
+        "A": {
+          "texto": "Cliente 1 - Precisa de um grande empréstimo para abrir uma fábrica de cosméticos. No plano de negócios não há medidas sustentáveis.",
+          "impactoAtmosferico": 16,
+          "impactoHidrico": 4,
+          "impactoSolo": 16,
+          "governo": -8,
+          "empresas": 8,
+          "sociedade": 4,
+          "tweets": [
+            "<sprite name=E283>Uma fábrica de cosméticos? Espero que pelo menos usem ingredientes naturais... mas sem sustentabilidade, sério?",
+            "Mais uma empresa pensando só em lucro. O banco deveria priorizar negócios sustentáveis! \uD83C\uDF0D",
+            "Bom, pelo menos vai gerar empregos na região. Mas e o impacto ambiental? \uD83E\uDD14",
+            "Cosméticos? Por que não investir em algo mais inovador ou sustentável? Que decepção. \uD83D\uDE24"
+            ],
+            "news": "Fábrica de cosméticos é inaugurada na cidade, gerando empregos e movimentando a economia local. No entanto, a empresa é criticada por não adotar medidas sustentáveis em sua produção."
+            
+        
+        },
+        "B": {
+          "texto": "Cliente 2 - Precisa de um empréstimo para abrir uma loja de produtos orgânicos e saudáveis. O plano de negócios inclui medidas sustentáveis, mas o valor do empréstimo é baixo.",
+          "impacto": [8, 2, 8, 4, 4],
+          "ambiental": [0, 0],
+          "tweets": [
+            "Finalmente alguém pensando no planeta! Produtos orgânicos são o futuro. \uD83D\uDC4F\uD83C\uDF31",
+            "Espero que o banco apoie mais projetos assim. Pequenas iniciativas podem fazer uma grande diferença! \uD83D\uDC9A",
+            "Uma loja orgânica? Parece uma boa ideia, mas será que vai ter impacto suficiente? \uD83E\uDD14",
+            "Adoro ver empreendimentos sustentáveis ganhando apoio. Quero ver essa loja crescer! \uD83D\uDECD"
+            ]
+        },
+        "C": {
+          "texto": "Cliente 3 - Precisa de um grande empréstimo para expandir seu negócio de tecnologia. Possui um plano de negócios sólido e sustentável.",
+          "impacto": [16, 4, 16, 4, 4],
+          "ambiental": [0, 0],
+          "tweets": [
+            "Investir em tecnologia sustentável é o que o mundo precisa agora! Parabéns ao banco por essa escolha. \uD83D\uDCBB\uD83C\uDF0D",
+            "Tecnologia sustentável? Já quero saber mais sobre esse projeto! Parece promissor. \uD83C\uDF1F",
+            "Um empréstimo grande, mas pelo menos tem um plano sólido e sustentável. Boa decisão! \uD83D\uDCA1",
+            "Isso sim é futuro! Mais investimentos assim, por favor. #SustentabilidadeTech"
+            ]
+        },
+        "D": {
+          "texto": "Cliente 4 - Precisa de um grande empréstimo para construir um hospital privado. Não há medidas sustentáveis na edificação.",
+          "impacto": [16, 4, 16, -8, 8],
+          "ambiental": [0, 0],
+          "tweets": [
+            "Um hospital é importante, mas e o impacto ambiental disso? Não dá pra ignorar. \uD83D\uDE1F",
+            "Investir na saúde é essencial, mas um hospital sustentável seria ainda melhor. Que pena. \uD83D\uDE14",
+            "Por que não integrar medidas sustentáveis na construção? Dá pra salvar o planeta e vidas ao mesmo tempo. \uD83C\uDFE5\uD83C\uDF31",
+            "Bom, saúde é prioridade... mas espero que isso não vire uma desculpa pra ignorar o meio ambiente. \uD83C\uDF0D"
+            ]
+        }
+      }
+    },
+    "P2": {
+        "pergunta": "Você e alguns sócios decidiram iniciar um banco digital. Qual vai ser o principal objetivo?",
+        "alternativas": {
+        "A": {
+            "texto": "Investir em projetos de energia renovável e eficiência energética.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Finalmente um banco que pensa no futuro! Energia limpa é o caminho. \uD83D\uDC4F\uD83C\uDF31",
+            "Espero que não seja só marketing verde… Quero ver resultados reais! \uD83C\uDF0D",
+            "Energia renovável é importante, mas e os pequenos negócios? Vão ficar de fora?",
+            "Mais um passo para um planeta melhor. Obrigado por investir no que importa! #Sustentabilidade"
+            ]
+        },
+        "B": {
+            "texto": "Oferecer linhas de crédito com juros subsidiados para empresas que adotam práticas sustentáveis.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Meu negócio é pequeno, mas sustentável. Como faço pra acessar essa linha de crédito \uD83D\uDC81\u200D\u2640\uFE0F",
+            "Empresas sustentáveis ganhando apoio financeiro? Finalmente uma ideia sensata! \uD83D\uDC4F",
+            "Legal, mas quero ver se vão dar crédito só pra quem já tem dinheiro. Pequenos empresários precisam disso!",
+            "Apoiar práticas sustentáveis é essencial, mas espero que não tenham taxas escondidas… \uD83E\uDD14"
+            ]
+        },
+        "C": {
+            "texto": "Investir em projetos que possuam uma boa proposta de negócios, mesmo que não sejam sustentáveis.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Então sustentabilidade não importa? O que adianta um plano de negócios se o planeta tá sofrendo? \uD83D\uDE21",
+            "Pelo menos estão olhando para bons projetos, mas esquecer a sustentabilidade é um erro grave.",
+            "Achei justo! Nem todo negócio precisa ser sustentável, mas precisa ser sólido. Boa estratégia! \uD83D\uDCBC",
+            "Mais um banco pensando só em lucros e ignorando o impacto ambiental. Não vou confiar nisso. \uD83D\uDE12"
+            ]
+        },
+        "D": {
+            "texto": "Investir em projetos agrícolas, devido à alta rentabilidade para o banco.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Apoiar o agronegócio é importante, mas e as práticas sustentáveis? Agro também polui, sabia? \uD83D\uDE21",
+            "Se bem feito, pode dar certo. Agricultura é a base de muita coisa, mas quero ver transparência nisso.",
+            "Só espero que invistam em tecnologias agrícolas limpas, senão é só mais lucro à custa do planeta. \uD83D\uDE24",
+            "Eu trabalho no campo e isso parece bom. Se ajudarem os produtores de verdade, pode ser incrível. \uD83D\uDE9C"
+            ]
+        }
+        }
+    },
+    "P3": {
+        "pergunta": "Você possui um banco e quer incentivar práticas sustentáveis entre seus clientes e contribuir para a preservação ambiental. Quais ações você vai adotar?",
+        "alternativas": {
+        "A": {
+            "texto": "Oferecer linhas de crédito com taxas reduzidas para projetos de energia renovável, incentivando empresas e indivíduos a investirem em fontes de energia limpas, como solar e eólica.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Acho incrível que um banco esteja priorizando energia renovável! #Sustentabilidade \uD83C\uDF31\u26A1",
+            "Solar e eólica são o futuro! O banco está indo na direção certa. \uD83C\uDF1E\uD83C\uDF2A",
+            "Finalmente um banco que pensa no futuro do planeta! Vamos usar mais energia limpa! \uD83C\uDF0D\uD83D\uDC9A",
+            "Apoiar projetos de energia renovável é o melhor investimento que podemos fazer. \uD83D\uDC4F"
+            ]
+        },
+        "B": {
+            "texto": "Investir em empresas que desmatam áreas protegidas, buscando maximizar lucros independentemente dos impactos ambientais.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Desmatamento para maximizar lucros? Isso é completamente irresponsável. \uD83D\uDE21",
+            "Não dá para ignorar os impactos ambientais só por causa de dinheiro. #DesmatamentoNão \uD83C\uDF33\u274C",
+            "Sério? Como podem apoiar empresas que destroem o meio ambiente? \uD83D\uDC94",
+            "Se o banco apoiar empresas assim, acho que vou procurar outra instituição. #DesmatamentoNão"
+            ]
+        },
+        "C": {
+            "texto": "Criar programas de recompensas para clientes que utilizam serviços bancários digitais, reduzindo o uso de papel e promovendo a digitalização dos processos.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Adooooooro a ideia de reduzir o uso de papel! Digitalização é o futuro! \uD83D\uDCBB\uD83D\uDCF1",
+            "Que bacana! Agora meu banco me recompensa por ser mais sustentável. #Digitalização \uD83C\uDF0D",
+            "Menos papel, mais árvores. Isso é ótimo para o meio ambiente! \uD83C\uDF33",
+            "Adoro iniciativas que incentivam o uso de menos papel. Vai ser bom para o planeta e para a gente! \uD83C\uDF31"
+            ]
+        },
+        "D": {
+            "texto": "Financiar apenas projetos de infraestrutura que utilizam práticas de construção sustentável, garantindo que os empreendimentos apoiados pelo banco respeitem normas ambientais rigorosas.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Apoiar construção sustentável é a única maneira de construir o futuro de forma responsável. \uD83D\uDEA7\uD83C\uDF31",
+            "Isso sim é um exemplo de responsabilidade ambiental. #ConstruçãoSustentável \uD83D\uDC8C\uD83C\uDF0D",
+            "Que ótimo ver um banco comprometido com a sustentabilidade na construção civil! \uD83C\uDFE2\uD83D\uDC9A",
+            "Construção sustentável é o caminho para reduzir nosso impacto no planeta. \uD83D\uDC4F"
+            ]
+        }
+        }
+    },
+    "P4": {
+        "pergunta": "Qual estratégia um banco pode adotar para alinhar seus investimentos com os objetivos de desenvolvimento sustentável?",
+        "alternativas": {
+        "A": {
+            "texto": "Criar um fundo de investimento focado em empresas de tecnologia limpa e agricultura sustentável.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Amo a ideia de investir em tecnologia limpa e agricultura sustentável! \uD83C\uDF31\uD83E\uDD8D",
+            "Esse fundo de investimento pode realmente mudar o futuro do planeta. #TecnologiaLimpa #AgriculturaSustentável \uD83C\uDF0D\uD83C\uDF3F",
+            "Se os bancos começarem a investir em sustentabilidade, o impacto será gigante! \uD83D\uDC4F\uD83D\uDC9A",
+            "Investir em práticas que ajudam a natureza é o caminho certo para o futuro! #Sustentabilidade"
+            ]
+        },
+        "B": {
+            "texto": "Continuar financiando indústrias altamente poluentes, sem considerar os impactos ambientais e sociais, visando apenas o retorno financeiro a curto prazo.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Como é possível ainda financiar indústrias poluentes em 2025? \uD83D\uDE24 #Impossível",
+            "O futuro está em energias renováveis, não em financiar poluição! #DestruiçãoAmbiente",
+            "Não dá para continuar ignorando os impactos ambientais em nome do lucro. #Desmatamento #Poluição",
+            "O banco deveria pensar no futuro do planeta, não só no retorno financeiro rápido! \uD83C\uDF0D\uD83D\uDC94"
+            ]
+        },
+        "C": {
+            "texto": "Lançar programas de educação financeira que incluam a conscientização sobre investimentos responsáveis, ajudando os clientes a entenderem como suas escolhas financeiras podem influenciar o meio ambiente.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "A educação financeira com foco em sustentabilidade é uma iniciativa incrível! \uD83D\uDCB8\uD83C\uDF31",
+            "Finalmente um banco que pensa na conscientização ambiental dos seus clientes! \uD83D\uDC4F #EducaçãoFinanceira",
+            "Esse programa de educação financeira vai fazer muita diferença. #InvestimentosResponsáveis \uD83D\uDC9A",
+            "Iniciativas que ensinam a importância das escolhas financeiras no meio ambiente são tudo! #FuturoSustentável"
+            ]
+        },
+        "D": {
+            "texto": "Priorizar empréstimos para projetos que seguem práticas de economia circular, onde os resíduos são minimizados e os recursos são reutilizados, promovendo a sustentabilidade em toda a cadeia produtiva.",
+            "impacto": [0, 0, 0, 0, 0],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Economia circular é o futuro! Ótima escolha para um mundo mais sustentável. \uD83C\uDF0D\u21B6",
+            "Investir em projetos de economia circular é um passo gigante para salvar o planeta. \uD83D\uDC9A #Sustentabilidade",
+            "Projetos que minimizam desperdício e reutilizam recursos são exatamente o que precisamos. \uD83C\uDF31\u27B0",
+            "Impressionado com essa prioridade por sustentabilidade! Vamos apoiar economia circular! \uD83D\uDCAA"
+            ]
+        }
+        }
+    },
+    "P5": {
+        "pergunta": "Você precisa escolher um projeto de Lei para aprovar. Qual você escolhe?",
+        "alternativas": {
+        "A": {
+            "texto": "PL 1 - Construção de uma ciclovia na via principal da cidade para estimular a população a utilizar menos os carros e promover a prática de exercícios.",
+            "impacto": [2, 16, 2, 8, 4],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Finalmente um projeto inteligente! Menos carros, mais saúde! 🚴🌍",
+            "Já era hora de investir em mobilidade sustentável! Ciclovia é um ótimo começo. 🚲",
+            "Espero que seja bem planejada, senão vira só um gasto inútil. 🤔",
+            "Ótima notícia! Agora só falta a cidade incentivar mais o uso de bicicletas! 🌟"
+            ]
+        },
+        "B": {
+            "texto": "PL 2 - Construção de uma estrada para interligar duas cidades.",
+            "impacto": [8, 16, 16, -16, 8],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Melhor infraestrutura sempre é bem-vinda, mas qual o impacto ambiental disso? 🌲",
+            "Pode ser bom para o comércio, mas espero que respeitem a natureza. 🚗🌱",
+            "Mais uma estrada? E os transportes públicos? Prioridades erradas... 😒",
+            "Ligação entre cidades é importante, mas essa obra precisa ser bem planejada. 🤔"
+            ]
+        },
+        "C": {
+            "texto": "PL 3 - Programa de habitação de interesse social, com medidas sustentáveis.",
+            "impacto": [8, 16, 16, -4, 16],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Moradia digna e sustentável? Isso sim é política pública de qualidade! 🏠🌱",
+            "Habitação social é essencial! Parabéns pela iniciativa. 🌟",
+            "Será que vai ser bem executado? Tem que fiscalizar pra valer. 🤔",
+            "Ótima ideia! Mais projetos assim deveriam ser prioridade! 👏"
+            ]
+        },
+        "D": {
+            "texto": "PL 4 - Revitalização da praça central da cidade, que estava abandonada, e incentivo do comércio na região.",
+            "impacto": [2, 16, 8, 4, 8],
+            "ambiental": [0, 0],
+            "tweets": [
+            "Uma praça revitalizada pode trazer vida nova à cidade! 🌳🌆",
+            "Espero que valorizem os pequenos comerciantes locais. 🛍",
+            "Melhor do que deixar um espaço abandonado, mas e a segurança? 🚫",
+            "Bom para o turismo e a economia local! Gostei da iniciativa. 🌟"
+            ]
+        }
+        }
+    },
+    "P6": {
+        "pergunta": "A cidade que você governa no Planet LIfE é a que mais consome água. Qual dessas medidas você decide tomar para reduzir o consumo?",
+        "alternativas": {
+        "A": {
+            "texto": "Campanhas de conscientização nas mídias sociais e TV sobre uso racional da água",
+            "impacto": [0, 4, 0, 4, 2],
+            "tweets": [
+            "Educar a população é sempre a melhor saída! Pequenas mudanças fazem uma grande diferença. 👏💧",
+            "Ótima iniciativa, mas será que só campanhas vão resolver o problema? Precisamos de mais ações! 🤔",
+            "Bom começo! Informação é poder. Espero que a cidade abrace essa causa. 🌍",
+            "Conscientizar é essencial, mas medidas práticas também são importantes! Vamos ver os resultados. 🏆"
+            ]
+        },
+        "B": {
+            "texto": "Implementação de sistemas de reuso de água em edifícios comerciais e públicos.",
+            "impacto": [2, 8, 2, 8, 2],
+            "tweets": [
+            "Finalmente uma solução concreta! Reutilizar água é fundamental para um futuro sustentável. 🌍",
+            "Isso sim é inovação! Espero que incentive o setor privado a adotar a ideia também. 💼",
+            "Reuso de água? Excelente! Mas será que a implementação será eficiente? Acompanhemos... 🤔",
+            "Ótima ideia! Água é um recurso precioso e não pode ser desperdiçada. 💧"
+            ]
+        },
+        "C": {
+            "texto": "Aumento na tarifa da água.",
+            "impacto": [0, -8, 0, 4, -4],
+            "tweets": [
+            "Mexer no bolso das pessoas pode ser eficaz, mas também injusto para quem já economiza água. 😔",
+            "Isso pode gerar revolta... Nem todo mundo tem condições de pagar mais. Há opções melhores? 🤔",
+            "A ideia até faz sentido, mas sem alternativas sustentáveis, só vai prejudicar os mais pobres. 😞",
+            "Preço mais alto pode reduzir o consumo, mas e a qualidade de vida da população? Cuidado com essa decisão! 🏠"
+            ]
+        },
+        "D": {
+            "texto": "Implementar cortes programados no fornecimento de água em bairros residenciais em determinados horários.",
+            "impacto": [0, -16, 0, 4, -8],
+            "tweets": [
+            "Cortar a água? Isso vai gerar caos! Medidas menos drásticas deveriam ser prioridade. 😡",
+            "Péssima ideia! O que acontece com hospitais, escolas e famílias que realmente precisam? 😯",
+            "A crise é real, mas isso vai prejudicar muita gente. Tem que ter outra solução! 💧",
+            "Isso parece mais punição do que solução. Gestão eficiente deveria ser o foco. 🤔"
+            ]
+        }
+        }
+    },
+    "P7": {
+    "pergunta": "Você governa uma das maiores cidades do Planet LIfE e quer torná-la mais sustentável. Quais modificações são prioridades na sua gestão?",
+    "alternativas": {
+      "A": {
+        "texto": "Incentivar a instalação de placas solares nas residências através da diminuição de taxas e impostos.",
+        "impacto": [-2, 4, 4, 8, 4],
+        "tweets": [
+          "Finalmente um governo incentivando energia limpa! Isso sim é progresso. 🌟🌍",
+          "Se o incentivo for real, pode ser um grande passo para um futuro sustentável! 💡",
+          "Será que vai ser acessível para todos ou só para quem já tem dinheiro? Vamos ver...",
+          "Energia solar deveria ser padrão já! Ainda bem que alguém está fazendo algo a respeito. 📢"
+        ]
+      },
+      "B": {
+        "texto": "Incentivar a economia de água e energia elétrica, através do aumento do preço desses serviços.",
+        "impacto": [2, -2, 0, 2, -8],
+        "tweets": [
+          "Ótimo, mais um aumento para pesar no bolso do povo... 😡",
+          "Se for para incentivar o consumo consciente, pode até fazer sentido. Mas tem que ter planejamento!",
+          "Poderia ter outras soluções antes de simplesmente subir o preço, né? 🤔",
+          "Quem gasta mais, paga mais! Mas será que isso realmente vai funcionar a longo prazo?"
+        ]
+      },
+      "C": {
+        "texto": "Aumentar o desempenho energético dos edifícios do governo.",
+        "impacto": [0, 4, 2, 4, 2],
+        "tweets": [
+          "Finalmente alguém pensando em eficiência energética no setor público! 👏",
+          "Isso é bom, mas e o resto da cidade? Energia sustentável tem que ser para todos!",
+          "Menos desperdício, mais economia. Parece um bom começo! 💡",
+          "Se for bem implementado, pode ser um ótimo exemplo para outras iniciativas!"
+        ]
+      },
+      "D": {
+        "texto": "Criar programas para incentivar a reciclagem e a coleta correta dos resíduos domésticos.",
+        "impacto": [0, 8, 4, 8, 2],
+        "tweets": [
+          "Reciclagem bem feita muda o jogo! Espero que essa ideia saia do papel. 🌬",
+          "Muito bom, mas precisa de educação ambiental junto, senão ninguém segue as regras! 📚",
+          "Coleta seletiva bem organizada pode fazer uma diferença gigante. Bora ver na prática!",
+          "Se funcionar, pode transformar a cidade! Menos lixo, mais sustentabilidade! 💚"
+        ]
+      }
+    }
+  },
+  "P8": {
+    "pergunta": "Qual seria uma ação governamental eficaz para promover a sustentabilidade e reduzir a emissão de gases de efeito estufa no setor de transporte?",
+    "alternativas": {
+      "A": {
+        "texto": "Subsidiar a compra de veículos elétricos e híbridos, incentivando a população a optar por meios de transporte com menor impacto ambiental.",
+        "impacto": [4, 4, 8, 4, 2],
+        "tweets": [
+          "Finalmente um incentivo real para veículos elétricos! Isso pode mudar o jogo. 🚗⚡",
+          "Se os subsídios forem bem aplicados, muita gente vai aderir. Vamos acompanhar! 👀",
+          "Ainda precisamos de infraestrutura para recarga. Senão, só quem tem garagem vai se beneficiar. 🔌",
+          "Ótimo incentivo! Agora só falta tornar os preços mais acessíveis para todos. 💰"
+        ]
+      },
+      "B": {
+        "texto": "Reduzir os investimentos em transporte público, forçando mais pessoas a utilizarem veículos particulares e, consequentemente, aumentando as emissões.",
+        "impacto": [0, -16, -2, -16, -4],
+        "tweets": [
+          "Reduzir investimento em transporte público? Só pode ser piada... 😡",
+          "Se o transporte público já é ruim, imagina com menos dinheiro. Caos total! 🏙🚍",
+          "Menos ônibus e trens? Significa mais trânsito, mais poluição e mais estresse. Péssima ideia! 🚦",
+          "Isso só vai prejudicar quem depende do transporte coletivo. Precisamos de soluções melhores! ❌"
+        ]
+      },
+      "C": {
+        "texto": "Eliminar as regulamentações sobre emissões veiculares, permitindo que os fabricantes produzam veículos menos eficientes em termos de consumo de combustível.",
+        "impacto": [0, -8, -4, -8, -4],
+        "tweets": [
+          "Liberar geral para poluição? Parece ideia do século passado... 🌍🔥",
+          "As regulamentações existem por um motivo! Menos eficiência significa mais emissões. 😞",
+          "Enquanto o mundo avança para carros limpos, essa medida seria um retrocesso total. ⏳",
+          "Menos controle sobre emissões significa pior qualidade do ar. Quem aguenta isso? 🤢"
+        ]
+      },
+      "D": {
+        "texto": "Promover o desenvolvimento de infraestruturas para ciclovias e transportes públicos eficientes, como trens e ônibus elétricos, diminuindo a dependência de veículos particulares movidos a combustíveis fósseis.",
+        "impacto": [2, 4, 2, 8, 8],
+        "tweets": [
+          "Transporte público eficiente e ciclovias? Isso sim é planejamento urbano inteligente! 🚲🚉",
+          "Menos carros, mais qualidade de vida! Transporte coletivo e sustentável é o futuro. 🌱",
+          "Se for bem implementado, vai facilitar a vida de todo mundo. Mais opções, menos trânsito! 🏙",
+          "Trens e ônibus elétricos fazem toda a diferença na redução da poluição. Apoio total! 💚"
+        ]
+      }
+    }
+    },
+    "P9": {
+    "pergunta": "Você é o diretor de uma indústria de alimentos e está pensando em expandir sua fábrica. Para isso, você pode realizar a construção num local mais afastado da sede, ou pode construir próximo à sede, mas será necessário desmatar uma grande área que possui diversas espécies de animais e árvores nativas.",
+    "alternativas": {
+      "A": {
+        "texto": "Escolho a opção próxima à sede, pensando na praticidade.",
+        "impacto": [4, 2, 16, -16, 0],
+        "tweets": [
+          "Pensando só na praticidade e esquecendo o meio ambiente... Péssima decisão! 🌳💀",
+          "Pode até ser mais fácil, mas o custo ambiental disso é enorme. 🤦‍♂️",
+          "Desmatar para construir? Parece uma escolha nada sustentável. 😡",
+          "A conveniência não deveria estar acima da preservação da natureza. 🌎"
+        ]
+      },
+      "B": {
+        "texto": "Escolho construir longe, a favor de preservar a natureza.",
+        "impacto": [4, 4, 16, -8, 2],
+        "tweets": [
+          "Ótima decisão! Preservar a natureza deve ser prioridade sempre. 🌿👏",
+          "Um pouco mais de logística, mas um impacto ambiental bem menor. Boa escolha! 🚛",
+          "Sustentabilidade e crescimento podem andar juntos, basta planejar bem. 💡",
+          "Preservar as florestas é essencial! Melhor pensar a longo prazo. 🌍"
+        ]
+      },
+      "C": {
+        "texto": "Escolho não expandir, mantendo o negócio como está, mesmo deixando de gerar lucros.",
+        "impacto": [0, 0, -16, 2, 0],
+        "tweets": [
+          "Sustentabilidade total, mas a empresa pode acabar ficando para trás... 🤔",
+          "Decisão difícil, mas o meio ambiente agradece! 🌱",
+          "Sem crescimento, pode ser um problema econômico. Mas pelo menos não há desmatamento. ⚖️",
+          "Nem sempre expandir é a melhor opção. Manter o equilíbrio é importante! 🏭"
+        ]
+      },
+      "D": {
+        "texto": "Escolho expandir próximo à sede, mas apenas a metade do tamanho que havia pensado inicialmente.",
+        "impacto": [2, 2, 8, -8, 2],
+        "tweets": [
+          "Um meio-termo, mas ainda assim vai impactar a natureza. 🤷‍♂️",
+          "Melhor do que desmatar tudo, mas poderia ter buscado outra alternativa. 🌳",
+          "Expansão controlada é melhor do que um impacto ambiental gigantesco. 🤝",
+          "Compromisso parcial com o meio ambiente. Poderia ter sido uma decisão mais sustentável. 🌎"
+        ]
+      }
+    }
+},
+"P10": {
+    "pergunta": "Como diretor de uma indústria química, você precisa priorizar uma estratégia para guiar a empresa nesse ano. Qual você escolhe?",
+    "alternativas": {
+      "A": {
+        "texto": "Implementar programas de gestão de resíduos para reduzir, reutilizar e reciclar materiais em todas as etapas do processo produtivo.",
+        "impacto": [0, 2, 8, 16, 2],
+        "tweets": [
+          "Sustentabilidade na indústria química? Isso sim é inovação! 🌱🏭",
+          "Reciclagem e reutilização são o futuro da produção industrial! 👏♻️",
+          "Ótima estratégia! Reduz impacto ambiental e ainda melhora a eficiência. 🌍",
+          "Espero que esse programa seja sério e não só marketing verde... 🤔"
+        ]
+      },
+      "B": {
+        "texto": "Investir em tecnologias capazes de aumentar a produção, para gerar mais lucros e substituir a mão de obra.",
+        "impacto": [2, -2, 8, -8, -16],
+        "tweets": [
+          "Lucro acima de tudo, né? Mas e os trabalhadores que vão perder seus empregos? 😡",
+          "Tecnologia é importante, mas não às custas dos funcionários. ⚠️",
+          "Se for bem planejado, pode aumentar a eficiência sem prejudicar tanto a equipe. 🤖",
+          "Automação é o futuro, mas cortar empregos sem alternativas é cruel. 🚫"
+        ]
+      },
+      "C": {
+        "texto": "Aumentar a extração de recursos naturais, que são baratos, visando aumentar a produção e os lucros.",
+        "impacto": [0, -2, 8, -16, -4],
+        "tweets": [
+          "Mais exploração dos recursos naturais? Já não basta o estrago ambiental? 😠🌿",
+          "Barato no curto prazo, caro no longo prazo! O planeta não aguenta mais. 🌎",
+          "Se não houver um plano sustentável, isso pode ser um desastre ambiental! ⚠️",
+          "Lucro rápido, impacto ambiental gigantesco. Péssima decisão! 😢"
+        ]
+      },
+      "D": {
+        "texto": "Minimizar custos desligando alguns funcionários e cortando programas de treinamento.",
+        "impacto": [0, -2, -8, 0, -16],
+        "tweets": [
+          "Cortar empregos e treinamento? Isso só prejudica a empresa a longo prazo. 😡",
+          "Reduzir custos à custa dos funcionários nunca é uma boa estratégia! ❌",
+          "Sem treinamento, sem inovação. Esse corte pode sair caro depois... 🤦‍♂️",
+          "Parece que o lucro vale mais do que as pessoas para essa empresa. Lamentável! 😔"
+        ]
+      }
+    }
+}
+}
